@@ -1,0 +1,106 @@
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  27 JUL 2017 01:15
+entering extended mode
+**./rapport.tex
+(rapport.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
+y"
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+
+Package inputenc Warning: inputenc package ignored with utf8 based engines.
+
+) ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\fontenc.sty
+"
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+ ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 105.
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+))
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\opensans\opensans.
+sty"
+Package: opensans 2011/11/11 Opensans
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\slantsc\slantsc.st
+y"
+Package: slantsc 2012/01/01 v2.11 Provide Slanted an Italic Small Caps
+ ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+LaTeX Info: Redefining \upshape on input line 35.
+LaTeX Info: Redefining \slshape on input line 45.
+LaTeX Info: Redefining \itshape on input line 55.
+LaTeX Info: Redefining \scshape on input line 65.
+)) (rapport.aux)
+\openout1 = `rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Try loading font information for T1+fos on input line 18.
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\opensans\t1fos.fd"
+File: t1fos.fd 2011/11/11 Fontinst v1.927 font definitions for T1/fos.
+)
+Overfull \hbox (23.13567pt too wide) in paragraph at lines 27--36
+\T1/fos/l/n/12 scrip-tion des pro-ces-sus métier Les opéra-tions liées aux dif-
+férentes ressources 
+ []
+
+[1
+
+] (rapport.aux) )
+(\end occurred inside a group at level 2)
+
+### simple group (level 2) entered at line 26 ({)
+### simple group (level 1) entered at line 20 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 685 strings out of 427834
+ 8243 string characters out of 3148501
+ 64436 words of memory out of 3000000
+ 4698 multiletter control sequences out of 15000+200000
+ 16669 words of font info for 19 fonts, out of 3000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 26i,4n,19p,223b,137s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on rapport.pdf (1 page).
