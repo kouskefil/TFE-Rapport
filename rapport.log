@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  27 JUL 2017 01:15
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  9 SEP 2017 04:54
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -59,48 +59,107 @@ LaTeX Info: Redefining \upshape on input line 35.
 LaTeX Info: Redefining \slshape on input line 45.
 LaTeX Info: Redefining \itshape on input line 55.
 LaTeX Info: Redefining \scshape on input line 65.
-)) (rapport.aux)
+))
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem.
+sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip43
+\enit@outerparindent=\dimen103
+\enit@toks=\toks17
+\enit@inbox=\box26
+\enitdp@description=\count87
+)
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+sty"
+\lst@mode=\count88
+\lst@gtempboxa=\box27
+\lst@token=\toks18
+\lst@length=\count89
+\lst@currlwidth=\dimen104
+\lst@column=\count90
+\lst@pos=\count91
+\lst@lostspace=\dimen105
+\lst@width=\dimen106
+\lst@newlines=\count92
+\lst@lineno=\count93
+\lst@maxwidth=\dimen107
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
+ty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count94
+\lst@skipnumbers=\count95
+\lst@framebox=\box28
+)
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
+cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Try loading font information for T1+fos on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+\c@lstlisting=\count96
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no • in font ec-lmbx12!
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 39.
 
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\opensans\t1fos.fd"
-File: t1fos.fd 2011/11/11 Fontinst v1.927 font definitions for T1/fos.
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (23.13567pt too wide) in paragraph at lines 27--36
-\T1/fos/l/n/12 scrip-tion des pro-ces-sus métier Les opéra-tions liées aux dif-
-férentes ressources 
- []
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 39.
+
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 39.
+Missing character: There is no • in font ec-lmbx12!
+Missing character: There is no ’ in font ec-lmr12!
+Missing character: There is no ’ in font ec-lmr12!
 
 [1
 
-] (rapport.aux) )
-(\end occurred inside a group at level 2)
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 91.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 91.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 91.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 91.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 91.
+ [2]
+Overfull \hbox (19.67331pt too wide) in paragraph at lines 95--96
+ \T1/lmr/bx/n/12 Recherche et vue d'ensemble[] \T1/lmr/m/n/12 Cette manière de 
+gérer per-met au développeur
+ []
 
-### simple group (level 2) entered at line 26 ({)
-### simple group (level 1) entered at line 20 ({)
-### bottom level 
+[3] [4] (rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 685 strings out of 427834
- 8243 string characters out of 3148501
- 64436 words of memory out of 3000000
- 4698 multiletter control sequences out of 15000+200000
- 16669 words of font info for 19 fonts, out of 3000000 for 9000
+ 2117 strings out of 427834
+ 29449 string characters out of 3148501
+ 92696 words of memory out of 3000000
+ 6101 multiletter control sequences out of 15000+200000
+ 37930 words of font info for 35 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 26i,4n,19p,223b,137s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 26i,8n,32p,515b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on rapport.pdf (1 page).
+Output written on rapport.pdf (4 pages).

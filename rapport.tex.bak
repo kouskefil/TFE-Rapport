@@ -2,6 +2,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[defaultsans]{opensans}
+\usepackage{enumitem}
+\usepackage{listings}
 
 \DeclareRobustCommand\ebseries{\fontseries{eb}\selectfont}
 \DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
@@ -13,28 +15,137 @@
 \DeclareTextFontCommand{\textlt}{\ltseries}
 \DeclareTextFontCommand{\textcl}{\clseries}
 
-    \begin{document}
-    
-\sffamily
+\begin{document}
 
-{\sbseries
-Méthodologie d'approche
+\section{Introduction}
 
-\ltseries
-Pour mener à bien cette tâche, nous avons opter pour la mise en place d'un environnement de développement  de module pour un PaaS
+\section{blablabla}
 
-{\sbseries
-Définition de module
-\ltseries
-Les URIs REST pour accéder aux  différentes ressources côté serveur
-Les éléments côté client 
-Vues, controllers, services (architecture mvc)
-Les éléments côté serveur
-Base de données
-Description des processus métier
-Les opérations liées aux différentes ressources
+\section{Conception ...}
+\subsection{Le concept d'un module}
+
+Le concept de module dans une architecture client-serveur représente un ensemble d'éléments côté client
+interagissant avec d'autres éléments côté serveur.
+\subsection{Les éléments côté client}
+%parler du MVC (séparation des vues de la donnée)%
+La partie cliente d’un module est basée sur l'architecture Model Views
+Controllers et est constituée des différentes pages html du module,
+des services qui permettent de récupérer les données du serveur via
+les Contrôleurs.
+\subsubsection{Présentation de la vue générale} %Interface de conception de la partie cliente%
+\paragraph{•}
+La conception de la partie cliente passe par quelques étapes que sont:
+\begin{itemize}
+\item La création de la vue, en cliquant sur l'icône + de la barre des actions;
+\item La configuration de la vue sous l'onglet  configs;
+\item La construction de la vue en cliquant sur les composants sous
+  l'onglet composants et l'alignement des composants avec l'arbre des
+  composants
+\item La déclaration des fonctions et des variables du contrôleur de la vue
+\item Et enfin la déclaration des actions liées à la vue
+
+\end{itemize}
+
+\subsubsection{ Les composants} 
+\paragraph{•}
+Nous avons classé les composants en trois catégories que sont :
+\begin{enumerate}[label=\Alph*)]
+\item \emph{ Les composants simples};
+ce sont des éléments HTML classiques.
+\item \emph { Les composants conteneurs};
+Les composants conteneurs sont des éléments HTML qui peuvent contenir d'autres éléments HTML. 
+Ils regroupent des un ensemble de composants simples, conteneurs, ou widgets. 
+\item Les composants widgets
+\end{enumerate}
 
 
+
+\subsubsection{ L'arbre des composants}
+ L'arbre des composants est la  vue globale de l’ensemble des
+composants qui constistuent une interface  encours de création. L’arborescence est
+obtenue au fur et à mesure que le développeur ajoute des composants à l'interface. Le choix de la structure en arbre ne s'est pas 
+fait au hasard, en effet les composants conteneurs qui regroupent d'autres composants conteneurs font que la structure se construit tout seul.
+L'objectif visé est de permettre au développeur de perdre moins de temps, à l'indentation de code, à la recherche d'un composants html, à devoir gérer un fichier long fichier HTML et surtout à réécrire les mes composants plusieurs fois. toujours dans le but de faciliter la vie au développeur, on associe des actions à chaque composants de l'arbre.
+Nous avons mis en place 5 actions permettant la réutilisation de composants à savoir :
+
+\begin{itemize}
+\item Monter - descendre : elles permettent de faire monter ou de faire descendre localement un composant dans
+  l'arborescence. Ceci permet de réorganiser les composants sur l'interface en terme de conteneur.
+\item couper :	 permet de déplacer les composants d'un conteneur à un autre. Ceci permet la réorganisation globale des composants.
+\item copier : 	permet de cloner un composant, soit dans un même conteneur ou dans un autre.
+par exemple sur une page contenant un formulaire nom, prénom, email et mot de passe, le développeur place un premier
+champ avec tous ses paramètres, puis clone ce dernier en prenant soins de changer seulement les variables liées aux clones. Ceci permet donc de générer facilement  une interface avec des composants semblables.
+\item Supprimer : enlève tout simplement le composant de l'arborescence.
+\end{itemize}
+
+% Introduire les propriétés des composants, parler de maniere gle du
+% design, de la vue et du controleur%
+%montrer àpartir d'un exemple, decrire les différentes propriétés des
+%composants%
+%faire une reférence vers la description des autes composants se
+%trouvant en annexe%
+	
+
+\subsubsection{ Les fonctions}
+Sans perdre de vue l'objectif premier qui est d'améliorer la productivité du développeur,  le concept ici est de lui permettre
+d'avoir une idée du travail réalisé et le reste en terme de fonctionnalités de l'interface encours de création \footnote{exemple de phpstorm  repliant des fonction.},
+\paragraph{Erreur d'écriture}
+ Il nous est arrivé plus d'une fois de perdre du temps à chercher pourquoi telle ou telle  fonction n'est pas appelée au clique avant de nous rendre compte que la fonction déclarée dans la vue est différente de celle écrite dans le contrôleur. Pour y remédier, nous générons les fonctions à implémenter à partir de l'arbre des composants. Ceci se fait en parcourant les attributs de chaque composant et en extrayant les valeurs des attributs correspondants  à des appels de fonctions.
+\paragraph{Recherche et vue d'ensemble}
+Cette manière de gérer permet au développeur de voir la liste des fonctions, leurs définitions, de définir celles qui ne le sont pas,  de pouvoir faire facilement des recherches dans une fonction précise.
+\subsubsection{ Les actions}
+Les actions représentent représentent une partie des fonctionnalités
+du module faisables à partir de la vue encours d'édition.  Pour
+ajouter une fonction, il faut :
+\begin{itemize}
+\item Préciser le nom de l'action;
+\item  Préciser le rôle de l'utilisateur qui peut y avoir accès;
+\item Préciser l'icône  de l'action, c'est sur cette dernière qu'il faut cliquer pour exécuter l'action;
+\item Préciser les dépendances;
+\item Enfin écrire le corps de la fonction de l'action
+\end{itemize}
+\subsubsection{ Les variables}
+Le cas des variables est semblables à celui des fonctions, en effet il y a plusieurs variables
+qui soit affiche leurs valeurs soit récupèrent des données (inputs, select, etc...). Elles sont soit extraites 
+de l'arborescence des composants soit déclarées par le développeur.
+\paragraph{Déclaration}
+Les variables  peuvent être de type  resolves, c'est à dire que
+leurs valeurs sont récupérées bien avant le chargement de la
+vue. Asynchrones, leurs valeurs sont récupérées lorsque ces dernières
+sont disponibles, il faut dans cas préciser le service.%expliquer service, expliquer le type locale %
+%Locales, Elles sont accessibles seulement au sein du contrôleur de la vue courante.
+En fonction de la valeur de l'attribut cache, les variables peuvent être récupérer  ou être  placer dans le cache. 
+
+\subsubsection{ La configuration} 
+%lobjectif depuis le debut etait deja de cacher des parties de l'implémentation.
+Non seulement cette étape est une étape clé dans la création de l'interface,
+mais aussi, une grande partie de l'implémentation
+est cachée au développeur qui ne se contente que de de fournir quelques paramètres. 
+Ceci pour garder le même niveau de simplicité à tous les niveaux. A partir des paramètres fournis
+ici, nous allons générer l'état de l'application qui fait appel à cette interface ainsi que la liste des rôles du module.
+\paragraph{Menus}
+Défini si l'interface encours d'édition est accessible à partir du menu du module,
+si oui, préciser son rôle et son icône. A partir de là, nous déterminons le menu 
+du module encours de création. 
+
+\subsection{Les éléments côté serveur}
+
+\subsubsection{Les resources}
+
+\subsubsection{Les opérations}
+\subsubsection{Les données Externes}%base de données + process%
+
+\subsection{Overview}
+
+\subsection{Conception du portail applicatif}%penser à definir la
+   %notion de SPA, s'assurer que module est défini%
+   
+\subsubsection{Description}
+%décrir le concept d'installation du module %
+\subsubsection{Description}
+
+\section{Implémentation ...}
+\section{conclusion}
 
 
 \end{document} 
