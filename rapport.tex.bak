@@ -131,6 +131,7 @@ du module encours de création.
 \subsection{Les éléments côté serveur}
 
 \subsubsection{Les resources}
+Les modules sont essentiellement RESTful,  
 
 \subsubsection{Les opérations}
 \subsubsection{Les données Externes}%base de données + process%
