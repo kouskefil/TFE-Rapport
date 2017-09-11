@@ -87,12 +87,24 @@ champ avec tous ses paramètres, puis clone ce dernier en prenant soins de chang
 	
 
 \subsubsection{ Les fonctions}
-Sans perdre de vue l'objectif premier qui est d'améliorer la productivité du développeur,  le concept ici est de lui permettre
-d'avoir une idée du travail réalisé et le reste en terme de fonctionnalités de l'interface encours de création \footnote{exemple de phpstorm  repliant des fonction.},
+Sans perdre de vue l'objectif premier qui est d'améliorer la
+productivité du développeur, le concept ici est de lui permettre
+d'avoir une idée du travail réalisé et le reste en terme de
+fonctionnalités de l'interface encours de création \footnote{exemple
+  de phpstorm repliant des fonction.},
 \paragraph{Erreur d'écriture}
- Il nous est arrivé plus d'une fois de perdre du temps à chercher pourquoi telle ou telle  fonction n'est pas appelée au clique avant de nous rendre compte que la fonction déclarée dans la vue est différente de celle écrite dans le contrôleur. Pour y remédier, nous générons les fonctions à implémenter à partir de l'arbre des composants. Ceci se fait en parcourant les attributs de chaque composant et en extrayant les valeurs des attributs correspondants  à des appels de fonctions.
+ Il nous est arrivé plus d'une fois de perdre du temps à chercher
+ pourquoi telle ou telle fonction n'est pas appelée au clique avant de
+ nous rendre compte que la fonction déclarée dans la vue est
+ différente de celle écrite dans le contrôleur. Pour y remédier, nous
+ générons les fonctions à implémenter à partir de l'arbre des
+ composants. Ceci se fait en parcourant les attributs de chaque
+ composant et en extrayant les valeurs des attributs correspondants à
+ des appels de fonctions.
 \paragraph{Recherche et vue d'ensemble}
-Cette manière de gérer permet au développeur de voir la liste des fonctions, leurs définitions, de définir celles qui ne le sont pas,  de pouvoir faire facilement des recherches dans une fonction précise.
+Cette manière de gérer permet au développeur de voir la liste des
+fonctions, leurs définitions, de définir celles qui ne le sont pas, de
+pouvoir faire facilement des recherches dans une fonction précise.
 \subsubsection{ Les actions}
 Les actions représentent représentent une partie des fonctionnalités
 du module faisables à partir de la vue encours d'édition.  Pour
@@ -129,9 +141,14 @@ si oui, préciser son rôle et son icône. A partir de là, nous déterminons le
 du module encours de création. 
 
 \subsection{Les éléments côté serveur}
-
+Les éléments côté serveurs sont  essentiellement  basés sur les APIs REST,
+une solution de plus en plus utilisée de nos jours pour créer des web services professionnels.
+REST pour REpresentationnal  State Transfer est en gros  un ensemble de règle pour créer des web services,
+lesquels peuvent être utiliser pour récupérer et ou modifier et ou afficher  des informations spécifiques sur le web
+sans effectuer d'opérations côté serveur. Ceci économise  énormément de temps.
 \subsubsection{Les resources}
-Les modules sont essentiellement RESTful,  
+ Les ressources  sont au coeur de l'architecture des APIs REST, elles doivent donc être
+ bien pensées et bien paramétréessr selon les principes 
 
 \subsubsection{Les opérations}
 \subsubsection{Les données Externes}%base de données + process%
@@ -140,10 +157,37 @@ Les modules sont essentiellement RESTful,
 
 \subsection{Conception du portail applicatif}%penser à definir la
    %notion de SPA, s'assurer que module est défini%
+ Le concept ici est
+d'implémenter une plateforme de de type PAE pour portail d'application d'entreprise par laquelle
+les utilisateurs d'une entreprise accèdent aux différentes
+applications de l'entreprise et aux données correspondantes en
+fonction de leur profil. l'idéale est donc de garantir la
+fluidité de la plateforme àfin d'améliorer l'expérience de navigation de
+l'utilisateur. A cet effet, elle est pensée single page application,
+application monopage, en gros, du lancement du portail jusq'à la fin de la
+session, une seule page charge dynamiquement les données en fonction
+de l'activité de l'utilisateur.Ceci lui de ne pas
+s'embrouiller et de ne pas confondre l'application installée et la
+plateforme d'accès.  
    
-\subsubsection{Description}
-%décrir le concept d'installation du module %
-\subsubsection{Description}
+\subsubsection{Installation du module}
+Le protail applicatif est en quelques sorte le squelette des
+applications. Ceci se décline dans la figure ...
+
+Après s'être connecter, l'utilisateur installe le module/l'application 
+qu'il veut utiliser. L'installation consiste à remplir les différentes
+parties du portail. Ainsi, on a:
+
+\begin{itemize}
+\item 1- Le nom du module;
+\item 2- Lien d'accès au dashboad du module;
+\item 3- Emplacement des menus du module;
+\item 4- Les liens vers les modules liés au module installé;
+\item 5- Barre d'opérations, où se placent les actions de la page
+  courante du module;
+\item 6- L'espace de travail, où s'interchangent les différentes pages
+  du module
+\end{itemize}
 
 \section{Implémentation ...}
 \section{conclusion}
