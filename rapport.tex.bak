@@ -148,7 +148,12 @@ lesquels peuvent être utiliser pour récupérer et ou modifier et ou afficher  
 sans effectuer d'opérations côté serveur. Ceci économise  énormément de temps.
 \subsubsection{Les resources}
  Les ressources  sont au coeur de l'architecture des APIs REST, elles doivent donc être
- bien pensées et bien paramétréessr selon les principes 
+ bien pensées et bien paramétrées en tenant compte des contraintes REST. Le concept ici est de
+ d'assister le développeur à mettre en place ses ressources sans perdre de temps avec une interface simplifiée
+ et intuitive. Ceci se décline dans l'interface de la figure ... Elle est divisée en trois parties à savoir : les liste des
+ ressources, la définition de ressources et les paramètres des ressources.
+ \paragraph{Ressources}
+ Permet d'avoir une vue d'ensemble des ressources et leurs arborescences. Ces dernières 
 
 \subsubsection{Les opérations}
 \subsubsection{Les données Externes}%base de données + process%
