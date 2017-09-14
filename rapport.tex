@@ -46,36 +46,66 @@ La conception de la partie cliente passe par quelques étapes que sont:
 
 \end{itemize}
 
-\subsubsection{ Les composants} 
-\paragraph{•}
-Nous avons classé les composants en trois catégories que sont :
-\begin{enumerate}[label=\Alph*)]
-\item \emph{ Les composants simples};
-ce sont des éléments HTML classiques.
-\item \emph { Les composants conteneurs};
-Les composants conteneurs sont des éléments HTML qui peuvent contenir d'autres éléments HTML. 
-Ils regroupent des un ensemble de composants simples, conteneurs, ou widgets. 
-\item Les composants widgets
-\end{enumerate}
+\subsubsection{ Les composants} % faut il lister les éléments
+Ils constituent un outil graphique permettant de manipuler les
+éléments qui entrent dans l'élaboration d'une interface web. Les
+manipulations sont basées sur un certains nombres de propriétés que 
+nous leur avons associé afin de controller leur mise en forme, leurs
+attributs html ainsi que les données qu'ils manipulent.
 
-
-
-\subsubsection{ L'arbre des composants}
- L'arbre des composants est la  vue globale de l’ensemble des
-composants qui constistuent une interface  encours de création. L’arborescence est
-obtenue au fur et à mesure que le développeur ajoute des composants à l'interface. Le choix de la structure en arbre ne s'est pas 
-fait au hasard, en effet les composants conteneurs qui regroupent d'autres composants conteneurs font que la structure se construit tout seul.
-L'objectif visé est de permettre au développeur de perdre moins de temps, à l'indentation de code, à la recherche d'un composants html, à devoir gérer un fichier long fichier HTML et surtout à réécrire les mes composants plusieurs fois. toujours dans le but de faciliter la vie au développeur, on associe des actions à chaque composants de l'arbre.
-Nous avons mis en place 5 actions permettant la réutilisation de composants à savoir :
+Nous avons resencé les composants les plus couremment utilisés dans les
+applications web et nous les avons regroupé en trois grandes
+catégories :
 
 \begin{itemize}
-\item Monter - descendre : elles permettent de faire monter ou de faire descendre localement un composant dans
-  l'arborescence. Ceci permet de réorganiser les composants sur l'interface en terme de conteneur.
-\item couper :	 permet de déplacer les composants d'un conteneur à un autre. Ceci permet la réorganisation globale des composants.
-\item copier : 	permet de cloner un composant, soit dans un même conteneur ou dans un autre.
-par exemple sur une page contenant un formulaire nom, prénom, email et mot de passe, le développeur place un premier
-champ avec tous ses paramètres, puis clone ce dernier en prenant soins de changer seulement les variables liées aux clones. Ceci permet donc de générer facilement  une interface avec des composants semblables.
-\item Supprimer : enlève tout simplement le composant de l'arborescence.
+\item {\em Les composants simples};
+ce sont des éléments HTML dont la définition ne nécéssite pas
+l'imbrication d'un autre composant.
+exemple:
+%mettre un exemple délément simple
+\item  {\em Les composants conteneurs} 
+Ce sont des éléments qui peuvent contenir des composants de
+n'importe quelle catégorie, par exemple l'élément html {\tt form}
+permet de regrouper les composants simples tels que les {\tt input} et
+des {\tt button} pour la réalisation d'un formulaire.
+\item Les composants widgets
+Ce sont des éléments non standards que nous avons entièrement écris, en
+proposant leur design et leur conception.
+\end{itemize}
+
+
+
+\subsubsection{ L'arbre des composants} 
+%mettre une note de bas de page pour dire les difficultés que
+%rencontrent les dévelopeurs
+Le concept de l'arbre des composants est d'augmenter la productivité
+des dévéloppeurs en %... à faire.
+
+
+L'arbre des composants est un outil permettant de représenter les
+composants d'une interface. Ses composants sont organisés sous forme
+d'arbre afin de mieux schématiser la hiérarchie induite par les
+composants conteneurs. La figure \ref{} représente l'arbre des
+composants de l'interface de la figure \ref{}.
+
+Notre concept se décline via l'inteface de la figure \ref{} dans
+laquelle on constate qu'un certains nombres d'actions sont associées à
+chaque composant. En effet pour permettre la réutilisation de codes
+nous proposons les cinq actions suivantes:
+
+\begin{itemize}
+\item Monter - descendre : elles permettent les déplacements de
+  composants vers le haut ou vers le bas, dans le même conteneur. Ceci
+  permet de réorganiser les composants d'un même conteneur.
+
+\item couper : elle permet les déplacements de composants d'un
+  conteneur à un autre. Ceci permet la réorganisation globale des
+  composants.
+\item copier : permet de cloner
+ un composant, soit dans un même
+  conteneur ou non. Ceci permet de générer facilement une interface avec
+  des composants semblables.
+\item Supprimer : elle permet d'enlever un composant de l'arborescence.
 \end{itemize}
 
 % Introduire les propriétés des composants, parler de maniere gle du
