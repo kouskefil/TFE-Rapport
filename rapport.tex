@@ -4,6 +4,7 @@
 \usepackage[defaultsans]{opensans}
 \usepackage{enumitem}
 \usepackage{listings}
+\usepackage[frenchb]{babel}
 
 \DeclareRobustCommand\ebseries{\fontseries{eb}\selectfont}
 \DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
@@ -79,7 +80,8 @@ proposant leur design et leur conception.
 %mettre une note de bas de page pour dire les difficultés que
 %rencontrent les dévelopeurs
 Le concept de l'arbre des composants est d'augmenter la productivité
-des dévéloppeurs en %... à faire.
+des dévéloppeurs en limitant le perte de temps due aux changements
+récurents dans le développement des interfaces \footnote{explication détaillée}.
 
 
 L'arbre des composants est un outil permettant de représenter les
@@ -117,25 +119,77 @@ nous proposons les cinq actions suivantes:
 	
 
 \subsubsection{ Les fonctions}
-Sans perdre de vue l'objectif premier qui est d'améliorer la
-productivité du développeur, le concept ici est de lui permettre
-d'avoir une idée du travail réalisé et le reste en terme de
-fonctionnalités de l'interface encours de création \footnote{exemple
-  de phpstorm repliant des fonction.},
+Le concept ici est d'améliorer la productivité du dévloppeur en :
+\begin{itemize}
+\item évitant les {\em erreurs d'écriture} dans les noms des
+fonctions dans les vues et dans les contrôleurs.
+\item proposant une {\em vue d'ensemble} du travail à réaliser (isolation ?).
+\end{itemize}
+
+Le concept se décline via l'inteface de la figure \ref{}
+
 \paragraph{Erreur d'écriture}
- Il nous est arrivé plus d'une fois de perdre du temps à chercher
- pourquoi telle ou telle fonction n'est pas appelée au clique avant de
- nous rendre compte que la fonction déclarée dans la vue est
- différente de celle écrite dans le contrôleur. Pour y remédier, nous
- générons les fonctions à implémenter à partir de l'arbre des
- composants. Ceci se fait en parcourant les attributs de chaque
- composant et en extrayant les valeurs des attributs correspondants à
- des appels de fonctions.
-\paragraph{Recherche et vue d'ensemble}
-Cette manière de gérer permet au développeur de voir la liste des
-fonctions, leurs définitions, de définir celles qui ne le sont pas, de
-pouvoir faire facilement des recherches dans une fonction précise.
+Le lien \og generate functions \fg, génère les noms des fonctions, à
+partir de l'arbre des composants. Les composants tels que button,
+... et ... font appel à des fonctions qu'ils définissent dans leurs
+propriétés. à partir des propriétés des composants cités plus haut,
+nous extrayons le nom des variables à déclarer.
+
+\paragraph{Vue d'ensemble}
+Nous pouvons dinstinguer parmi les variables à définir, celles qui
+sont dejà définies ou non. La définition d'une variable se fait en
+l'isolant des autres variables. Ceci permet au
+développeur de se focaliser sur le reste des variables et surtout de
+ne pas perdre de temps à chercher une information dans les codes qui
+peuvent rapideent devenir illisibles.
+
+\subsubsection{Les variables}
+Le concept ici est d'améliorer la productivité du dévloppeur en :
+\begin{itemize}
+\item évitant les {\em erreurs d'écriture} dans les noms des
+fonctions dans les vues et dans les contrôleurs.
+\item proposant une {\em vue d'ensemble} du travail à réaliser.
+\item simplifiant la déclaration des variables.
+
+\end{itemize}
+
+Le concept se décline via l'inteface de la figure \ref{}
+
+\paragraph{Erreur d'écriture.}
+Le lien \og generate vars \fg, génère les noms des variables, à partir
+de l'arbre des composants. Les composants manipulent des variables. à
+partir des propriétés, nous extrayons
+le nom des variables à implémenter.
+
+\paragraph{Vue d'ensemble.}
+Nous pouvons dinstinguer parmi les fonctions à implémenter, celles qui
+sont dejà définies ou non. La définition d'une fonction se fait en
+l'isolant\footnote{collapsible} des autres fonctions. Ceci permet au
+développeur de se focaliser sur le reste des fonctions et surtout de
+ne pas perdre de temps à chercher une information dans les codes qui
+peuvent rapideent devenir illisibles.
+
+\paragraph{Déclaration.}
+Les variables peuvent être de type {\em resolve}, {\em async} et {\em
+  cache}.  les variables de type {\em resolve} sont celles dont les
+valeurs sont présentes avant le chargement de la page qui les utilise.
+les variables de type {\em async} sont celles dont les valeurs
+proviennent d'un serveur de manière asynchrone; dans ce cas, le
+service permettant d'obtenir la donnée doit être préciser.  Les
+variables de type {\em cache} sont celles dont les valeurs sont mises
+ou proviennent d'un cache lorsque l'attribut cache a pour valeur {\tt
+  to} ou  {\tt from}.
+
+%service, %expliquer le
+%type locale
+%%
+
 \subsubsection{ Les actions}
+
+Ils constituent un outil graphique permettant d'associer des actions
+à une vue donnée.
+
+
 Les actions représentent représentent une partie des fonctionnalités
 du module faisables à partir de la vue encours d'édition.  Pour
 ajouter une fonction, il faut :
@@ -146,29 +200,28 @@ ajouter une fonction, il faut :
 \item Préciser les dépendances;
 \item Enfin écrire le corps de la fonction de l'action
 \end{itemize}
-\subsubsection{ Les variables}
-Le cas des variables est semblables à celui des fonctions, en effet il y a plusieurs variables
-qui soit affiche leurs valeurs soit récupèrent des données (inputs, select, etc...). Elles sont soit extraites 
-de l'arborescence des composants soit déclarées par le développeur.
-\paragraph{Déclaration}
-Les variables  peuvent être de type  resolves, c'est à dire que
-leurs valeurs sont récupérées bien avant le chargement de la
-vue. Asynchrones, leurs valeurs sont récupérées lorsque ces dernières
-sont disponibles, il faut dans cas préciser le service.%expliquer service, expliquer le type locale %
-%Locales, Elles sont accessibles seulement au sein du contrôleur de la vue courante.
-En fonction de la valeur de l'attribut cache, les variables peuvent être récupérer  ou être  placer dans le cache. 
+
+ 
 
 \subsubsection{ La configuration} 
-%lobjectif depuis le debut etait deja de cacher des parties de l'implémentation.
-Non seulement cette étape est une étape clé dans la création de l'interface,
-mais aussi, une grande partie de l'implémentation
-est cachée au développeur qui ne se contente que de de fournir quelques paramètres. 
-Ceci pour garder le même niveau de simplicité à tous les niveaux. A partir des paramètres fournis
-ici, nous allons générer l'état de l'application qui fait appel à cette interface ainsi que la liste des rôles du module.
+%lobjectif depuis le debut etait deja de cacher des parties de
+%l'implémentation.
+Le  concept est ici est d'améliorer la productivité du développeur en
+simplifiant la mise en place de la navigation, des menus et des droits.
+ Ce concept se décline via l'interface de la figure suivante \ref{}.
+
+\paragraph{Navigation}
+
+
 \paragraph{Menus}
-Défini si l'interface encours d'édition est accessible à partir du menu du module,
-si oui, préciser son rôle et son icône. A partir de là, nous déterminons le menu 
-du module encours de création. 
+La case à cocher \og module menu \fg permet de de spécifier si une vue
+a une entrée ou non dans la liste des menu d'un module.  De ce fait,
+il est possible en parcourant la liste des vues de la figure \ref{},
+d'obtenir les éléments du menu. On pourra non seulement identifier
+les icônes associées aux menus mais aussi changer l'ordre d'apparition
+des éléments dans le menu par un simple déplacement dans la liste des vues.
+ 
+\paragraph{Droits d'accès}
 
 \subsection{Les éléments côté serveur}
 Les éléments côté serveurs sont  essentiellement  basés sur les APIs REST,
