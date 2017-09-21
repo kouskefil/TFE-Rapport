@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  11 SEP 2017 13:28
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  20 SEP 2017 21:41
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -96,70 +96,135 @@ cfg"
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (rapport.aux)
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2017/05/19 3.10 The Babel package
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel-french\fre
+nchb.ldf"
+Language: frenchb 2017/04/30 v3.3a French support from the babel system
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2017/05/19 3.10 Babel common definitions
+\babel@savecnt=\count96
+\U@D=\dimen108
+
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\xebabel.de
+f"))
+\l@acadian = a dialect from \language\l@french 
+\l@canadien = a dialect from \language\l@french 
+\FB@nonchar=\count97
+\FBcolonsp=\toks19
+\FBthinsp=\toks20
+Package frenchb.ldf Info: No need for active punctuation characters
+(frenchb.ldf)             with this version of XeTeX!
+(frenchb.ldf)             reported on input line 274.
+\FB@punctthick=\XeTeXcharclass1
+\FB@punctthin=\XeTeXcharclass2
+\FB@punctnul=\XeTeXcharclass3
+\FB@guilo=\XeTeXcharclass4
+\FB@guilf=\XeTeXcharclass5
+\FB@guilnul=\XeTeXcharclass6
+\FBguillsp=\toks21
+\FBguill@level=\count98
+\FB@everypar=\toks22
+\FB@Mht=\dimen109
+LaTeX Info: Redefining \degres on input line 721.
+\mc@charclass=\count99
+\mc@charfam=\count100
+\mc@charslot=\count101
+\std@mcc=\count102
+\dec@mcc=\count103
+\listindentFB=\skip44
+\descindentFB=\skip45
+\labelwidthFB=\skip46
+\leftmarginFB=\skip47
+\parindentFFN=\dimen110
+\FBfnindent=\skip48
+))
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\carlisle\scalefnt.
+sty") (rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-\c@lstlisting=\count96
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no • in font ec-lmbx12!
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+\c@lstlisting=\count104
+LaTeX Info: Redefining \dots on input line 19.
+Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 19.
+Package frenchb.ldf Info: Setting StandardEnumerateEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 19.
+LaTeX Info: Redefining \up on input line 19.
 
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmr.fd"
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 39.
 
+Package frenchb.ldf Warning: Add \usepackage{fontspec} to the
+(frenchb.ldf)                preamble of your document, reported on input line 
+19.
 
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 39.
-Missing character: There is no • in font ec-lmbx12!
-Missing character: There is no ’ in font ec-lmr12!
-Missing character: There is no ’ in font ec-lmr12!
-
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 31.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 31.
 [1
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 93.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 93.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 93.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 94.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 94.
- [2]
-Overfull \hbox (19.67331pt too wide) in paragraph at lines 105--108
- \T1/lmr/bx/n/12 Recherche et vue d'ensemble[] \T1/lmr/m/n/12 Cette manière de 
-gérer per-met au développeur
- []
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 114.
 
-[3] [4] [5] (rapport.aux) ) 
+ ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [2]
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 163.
+
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 164.
+
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 166.
+
+[3]
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 202.
+
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 229.
+
+[4]
+
+LaTeX Warning: Reference `' on page 5 undefined on input line 284.
+
+[5]
+
+LaTeX Warning: Reference `' on page 6 undefined on input line 295.
+
+[6] [7] (rapport.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2117 strings out of 427834
- 29449 string characters out of 3148501
- 92696 words of memory out of 3000000
- 6101 multiletter control sequences out of 15000+200000
- 37930 words of font info for 35 fonts, out of 3000000 for 9000
+ 3182 strings out of 427834
+ 44412 string characters out of 3148501
+ 121375 words of memory out of 3000000
+ 7152 multiletter control sequences out of 15000+200000
+ 34953 words of font info for 34 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 26i,8n,32p,364b,219s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 28i,5n,32p,223b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on rapport.pdf (5 pages).
+Output written on rapport.pdf (7 pages).

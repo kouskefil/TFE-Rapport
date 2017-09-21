@@ -1,10 +1,10 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[defaultsans]{opensans}
 \usepackage{enumitem}
 \usepackage{listings}
-\usepackage[frenchb]{babel}
+\usepackage[francais]{babel}
 
 \DeclareRobustCommand\ebseries{\fontseries{eb}\selectfont}
 \DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
@@ -18,34 +18,132 @@
 
 \begin{document}
 
-\section{Introduction}
+\chapter{Introduction}
 
-\section{blablabla}
+\chapter{Le contexte du travail}
+\section{Le cahier des charges ?}
+\section{L'architecture de la plateforme cible}
+\section{Le framework Angularjs ?}
+\section{Les ressources REST}
+\section{Le contrôle d'accès en utilisant des rôles (RBAC)}
 
-\section{Conception ...}
-\subsection{Le concept d'un module}
+\chapter{La Conception de notre générateur de module}
+\section{Le concept général}
+\subsection{Définition d'un module}
 
-Le concept de module dans une architecture client-serveur représente un ensemble d'éléments côté client
-interagissant avec d'autres éléments côté serveur.
-\subsection{Les éléments côté client}
-%parler du MVC (séparation des vues de la donnée)%
-La partie cliente d’un module est basée sur l'architecture Model Views
-Controllers et est constituée des différentes pages html du module,
-des services qui permettent de récupérer les données du serveur via
-les Contrôleurs.
-\subsubsection{Présentation de la vue générale} %Interface de conception de la partie cliente%
-\paragraph{•}
-La conception de la partie cliente passe par quelques étapes que sont:
+%Le concept de module dans une architecture client-serveur représente
+%un ensemble d'éléments côté client interagissant avec d'autres
+%éléments côté serveur.
+Un module est une application métier \footnote{A expliquer} basée sur
+l'architecture client-serveur. Nous nous référons au terme module pour
+indiquer le caractère modulaire que peut prendre une application. Par
+exemple,la gestion des resources humaines est un assemblage de
+plusieurs sous-applications telles que la gestion des employés, la
+gestion des carrières, la gestion de la paie et la gestion des
+embaûches \footnote{donner la liste complète si possible}. 
+
+L'architecture client-serveur, implique qu'un module est composé
+d'une application {\em client} et d'une application {\em serveur}.
+L'application client est une interface graphique permettant à
+aux utilisateur d'interagir avec un système d'information.
+%faut il parler des single page ?
+L'application serveur est celle qui gère les données métiers dans un
+système d'information.
+La gestion des données est faite essentiellement via une base de
+données et les processus métiers. 
+
+\subsection{Le portail applicatif des modules}
+%penser à definir la   %notion de SPA, s'assurer que module est
+%défini%
+
+Le concept du portail applicatif est de fournir l'environnement
+d'installation et d'utilisation \footnote{Donner l'exemple des
+  application PAE} des applications générées à partir de
+notre générateur. Il représente le moule qui donne au développeur, un
+apperçu d'à quoi va ressembler son application à l'installation. 
+
+L'interface du  portail applicatif se décline dans la figure suivante.
+Elle est subdivisée en 6 parties à savoir :
+
 \begin{itemize}
-\item La création de la vue, en cliquant sur l'icône + de la barre des actions;
-\item La configuration de la vue sous l'onglet  configs;
-\item La construction de la vue en cliquant sur les composants sous
-  l'onglet composants et l'alignement des composants avec l'arbre des
-  composants
-\item La déclaration des fonctions et des variables du contrôleur de la vue
-\item Et enfin la déclaration des actions liées à la vue
-
+\item 1- Cette partie indique le nom du module installé
+\item 2- 
+\item 3- {\tt Menus}, il s'agit de la liste des menus du module
+\item 4- {\tt Linked modules}, liste des modules liés au module
+  installé \footnote{expliquer la liaison de module}
+\item 5- {\tt Workspace}, 
+\item 2-
+ 
 \end{itemize}
+   
+\subsubsection{Installation du module}
+Le protail applicatif est en quelques sorte le squelette des
+applications. Ceci se décline dans la figure ...
+
+Après s'être connecter, l'utilisateur installe le module/l'application 
+qu'il veut utiliser. L'installation consiste à remplir les différentes
+parties du portail. Ainsi, on a:
+
+\begin{itemize}
+\item 1- Le nom du module;
+\item 2- Lien d'accès au dashboad du module;
+\item 3- Emplacement des menus du module;
+\item 4- Les liens vers les modules liés au module installé;
+\item 5- Barre d'opérations, où se placent les actions de la page
+  courante du module;
+\item 6- L'espace de travail, où s'interchangent les différentes pages
+  du module
+\end{itemize}
+
+\subsection{Le principe générale}
+
+
+%A completer
+%parler de productivité générale
+%donner tout ce qui contribut à l'amélioration de cette dernière
+
+L'idée du générateur est d'utiliser un environnement graphique
+permettant de spécifier les différents éléments nécessaires à
+l'implémentation des applications client et serveur, en vue d'augmenter
+la productivité générale \footnote{listing des productivités} d'un développeur. En effet, une fois les
+éléments spécifiés, nous passons à la génération automatique des codes
+des applications client serveur. Ceci permettra aux développeurs de se
+focaliser sur la conception de leurs modules.
+
+Nous regroupons les éléments du module en deux catégories : ceux {\em
+  côté client } et ceux {\em côté serveur}.
+Les éléments côté client sont ceux qui sont nécessaires pour la mise
+en place d'une architecture (MVC). Ils permettent de définir les
+différentes pages ou vues html ainsi que les services qui permettent
+de recupérer les données du serveur.
+Les éléments côté serveur permettent de définir les bases de données,
+les processus métiers et ressources permettant d'interagir avec le client.
+
+
+
+
+
+
+
+
+\section{La présentation des éléments graphiques côté client}
+%parler du MVC (séparation des vues de la donnée)%
+\subsection{Overview}
+
+\subsubsection{Présentation de la vue générale}
+La vue générale se concentre sur les éléments côté client d'un
+module. Elle est l'étape principale dans le processus de réalisation
+d'un module. Aussi simple qu'elle parait, elle rassemble tous les
+outils nécessaires pour concevoir chacun des éléments de la partie
+cliente d'un module. Elle se résume à l'interface de la figure
+suivante. Sous les onglets {\tt components} et {\tt treeview}, nous
+disposons respectivement de la palette de composants html et de leur
+organisation sur la vue en forme d'arborescence. sous les onglets {\tt
+variables} et {\tt functions}, on définit les variables et les
+fonctions qui sont utilisées pour écrire le contrôleur de la vue. Sous
+les onglets {\tt actions} et {\tt configs} on définit respectivement
+les actions du module et les paramètres de configuration de la vue. 
+
 
 \subsubsection{ Les composants} % faut il lister les éléments
 Ils constituent un outil graphique permettant de manipuler les
@@ -190,7 +288,7 @@ Ils constituent un outil graphique permettant d'associer des actions
 à une vue donnée.
 
 
-Les actions représentent représentent une partie des fonctionnalités
+représentent une partie des fonctionnalités
 du module faisables à partir de la vue encours d'édition.  Pour
 ajouter une fonction, il faut :
 \begin{itemize}
@@ -198,7 +296,7 @@ ajouter une fonction, il faut :
 \item  Préciser le rôle de l'utilisateur qui peut y avoir accès;
 \item Préciser l'icône  de l'action, c'est sur cette dernière qu'il faut cliquer pour exécuter l'action;
 \item Préciser les dépendances;
-\item Enfin écrire le corps de la fonction de l'action
+awesome file input\item Enfin écrire le corps de la fonction de l'action
 \end{itemize}
 
  
@@ -206,16 +304,19 @@ ajouter une fonction, il faut :
 \subsubsection{ La configuration} 
 %lobjectif depuis le debut etait deja de cacher des parties de
 %l'implémentation.
-Le  concept est ici est d'améliorer la productivité du développeur en
-simplifiant la mise en place de la navigation, des menus et des droits.
- Ce concept se décline via l'interface de la figure suivante \ref{}.
+Le  concept ici est d'améliorer la productivité du développeur en
+simplifiant la mise en place des menus, des droits et de la navigation.
+Ce concept se décline via l'interface de la figure suivante \ref{}.
 
-\paragraph{Navigation}
-
-
-\paragraph{Menus}
-La case à cocher \og module menu \fg permet de de spécifier si une vue
-a une entrée ou non dans la liste des menu d'un module.  De ce fait,
+\paragraph{Navigation.}
+Elle consiste à construire l'état/route auquel(le) la vue est associée
+tout en précisant le nom de l'état, l'url associé et le chemin static
+ou dynamic du template. Ainsi, en parcourant la liste des vues, on peu
+les connaître les différents états du module.
+ 
+\paragraph{Menus.}
+La case à cocher \og module menu \fg permet de spécifier si une vue
+a une entrée ou non dans la liste des menus d'un module.  De ce fait,
 il est possible en parcourant la liste des vues de la figure \ref{},
 d'obtenir les éléments du menu. On pourra non seulement identifier
 les icônes associées aux menus mais aussi changer l'ordre d'apparition
@@ -223,62 +324,39 @@ des éléments dans le menu par un simple déplacement dans la liste des vues.
  
 \paragraph{Droits d'accès}
 
-\subsection{Les éléments côté serveur}
-Les éléments côté serveurs sont  essentiellement  basés sur les APIs REST,
-une solution de plus en plus utilisée de nos jours pour créer des web services professionnels.
-REST pour REpresentationnal  State Transfer est en gros  un ensemble de règle pour créer des web services,
-lesquels peuvent être utiliser pour récupérer et ou modifier et ou afficher  des informations spécifiques sur le web
-sans effectuer d'opérations côté serveur. Ceci économise  énormément de temps.
+\section{La présentation des éléments graphiques côté serveur}
+
+
 \subsubsection{Les resources}
- Les ressources  sont au coeur de l'architecture des APIs REST, elles doivent donc être
- bien pensées et bien paramétrées en tenant compte des contraintes REST. Le concept ici est de
- d'assister le développeur à mettre en place ses ressources sans perdre de temps avec une interface simplifiée
- et intuitive. Ceci se décline dans l'interface de la figure ... Elle est divisée en trois parties à savoir : les liste des
- ressources, la définition de ressources et les paramètres des ressources.
- \paragraph{Ressources}
- Permet d'avoir une vue d'ensemble des ressources et leurs arborescences. Ces dernières 
+Le concept ici est de faciliter l'implémentation  des APIs
+REST. Ceci se décline dans l'interface de la figure suivante.  Elle
+est divisée en trois parties à savoir : la liste des ressources, les
+détails d'une ressource et les paramètres des ressources.
+ \paragraph{La liste des ressources}.
+Elle permet d'avoir une vue d'ensemble sur les ressources d'un module.
+Son organisation en arborescence facilite la détection d'incohérences
+liées aux URIs
+\paragraph{Les Détails d'une ressource.}
+Au delà de l'URI visible dans l'arborescence, on distingue dans  cette
+partie les informations liées à une ressource. Ces dernières peuvent
+être mise à jour en cliquant sur l'action {\tt update}.
+
+\paragraph{Les paramètres d'une ressource}
+Cette partie donne une vue d'ensemble des {\tt méthodes} d'une
+ressources et permet aussi d'en créer de nouvelles. Une méthode est la
+définition d'une opération sur la ressource.
 
 \subsubsection{Les opérations}
+Les opérations sont étroitement liées aux ressources
+
 \subsubsection{Les données Externes}%base de données + process%
 
-\subsection{Overview}
 
-\subsection{Conception du portail applicatif}%penser à definir la
-   %notion de SPA, s'assurer que module est défini%
- Le concept ici est
-d'implémenter une plateforme de de type PAE pour portail d'application d'entreprise par laquelle
-les utilisateurs d'une entreprise accèdent aux différentes
-applications de l'entreprise et aux données correspondantes en
-fonction de leur profil. l'idéale est donc de garantir la
-fluidité de la plateforme àfin d'améliorer l'expérience de navigation de
-l'utilisateur. A cet effet, elle est pensée single page application,
-application monopage, en gros, du lancement du portail jusq'à la fin de la
-session, une seule page charge dynamiquement les données en fonction
-de l'activité de l'utilisateur.Ceci lui de ne pas
-s'embrouiller et de ne pas confondre l'application installée et la
-plateforme d'accès.  
-   
-\subsubsection{Installation du module}
-Le protail applicatif est en quelques sorte le squelette des
-applications. Ceci se décline dans la figure ...
+ 
 
-Après s'être connecter, l'utilisateur installe le module/l'application 
-qu'il veut utiliser. L'installation consiste à remplir les différentes
-parties du portail. Ainsi, on a:
 
-\begin{itemize}
-\item 1- Le nom du module;
-\item 2- Lien d'accès au dashboad du module;
-\item 3- Emplacement des menus du module;
-\item 4- Les liens vers les modules liés au module installé;
-\item 5- Barre d'opérations, où se placent les actions de la page
-  courante du module;
-\item 6- L'espace de travail, où s'interchangent les différentes pages
-  du module
-\end{itemize}
-
-\section{Implémentation ...}
-\section{conclusion}
+\chapter{L'implémentation du générateur }
+\chapter{conclusion}
 
 
 \end{document} 
