@@ -1,22 +1,23 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  20 SEP 2017 21:41
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6350 64-bit) (preloaded format=xelatex 2017.7.26)  21 SEP 2017 20:00
 entering extended mode
 **./rapport.tex
 (rapport.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size12.clo"
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\report.cls"
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo"
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@section=\count80
-\c@subsection=\count81
-\c@subsubsection=\count82
-\c@paragraph=\count83
-\c@subparagraph=\count84
-\c@figure=\count85
-\c@table=\count86
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -67,28 +68,28 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@outerparindent=\dimen103
 \enit@toks=\toks17
 \enit@inbox=\box26
-\enitdp@description=\count87
+\enitdp@description=\count88
 )
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
 sty"
-\lst@mode=\count88
+\lst@mode=\count89
 \lst@gtempboxa=\box27
 \lst@token=\toks18
-\lst@length=\count89
+\lst@length=\count90
 \lst@currlwidth=\dimen104
-\lst@column=\count90
-\lst@pos=\count91
+\lst@column=\count91
+\lst@pos=\count92
 \lst@lostspace=\dimen105
 \lst@width=\dimen106
-\lst@newlines=\count92
-\lst@lineno=\count93
+\lst@newlines=\count93
+\lst@lineno=\count94
 \lst@maxwidth=\dimen107
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.s
 ty"
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count94
-\lst@skipnumbers=\count95
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
 \lst@framebox=\box28
 )
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\listings.
@@ -99,21 +100,27 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2017/05/19 3.10 The Babel package
-
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel-french\fre
 nchb.ldf"
 Language: frenchb 2017/04/30 v3.3a French support from the babel system
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2017/05/19 3.10 Babel common definitions
-\babel@savecnt=\count96
+\babel@savecnt=\count97
 \U@D=\dimen108
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\xebabel.de
 f"))
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
-\FB@nonchar=\count97
+\FB@nonchar=\count98
 \FBcolonsp=\toks19
 \FBthinsp=\toks20
 Package frenchb.ldf Info: No need for active punctuation characters
@@ -126,15 +133,15 @@ Package frenchb.ldf Info: No need for active punctuation characters
 \FB@guilf=\XeTeXcharclass5
 \FB@guilnul=\XeTeXcharclass6
 \FBguillsp=\toks21
-\FBguill@level=\count98
+\FBguill@level=\count99
 \FB@everypar=\toks22
 \FB@Mht=\dimen109
 LaTeX Info: Redefining \degres on input line 721.
-\mc@charclass=\count99
-\mc@charfam=\count100
-\mc@charslot=\count101
-\std@mcc=\count102
-\dec@mcc=\count103
+\mc@charclass=\count100
+\mc@charfam=\count101
+\mc@charslot=\count102
+\std@mcc=\count103
+\dec@mcc=\count104
 \listindentFB=\skip44
 \descindentFB=\skip45
 \labelwidthFB=\skip46
@@ -160,7 +167,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
-\c@lstlisting=\count104
+\c@lstlisting=\count105
 LaTeX Info: Redefining \dots on input line 19.
 Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
 (frenchb.ldf)             compatibility with enumitem package,
@@ -175,56 +182,78 @@ Package frenchb.ldf Warning: Add \usepackage{fontspec} to the
 (frenchb.ldf)                preamble of your document, reported on input line 
 19.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 31.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 31.
+Chapitre 1.
 [1
 
-]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 114.
 
+]
+Chapitre 2.
+
+Overfull \hbox (15.31139pt too wide) in paragraph at lines 28--28
+[]\T1/lmr/bx/n/14.4 Le contrôle d'ac-cès en uti-li-sant des rôles (RBAC) 
+ []
+
+[2
+
+]
+Chapitre 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 37.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 37.
+[3
+
+]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 71.
  ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2]
+) [4]
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 163.
-
-
-LaTeX Warning: Reference `' on page 3 undefined on input line 164.
+LaTeX Warning: Reference `' on page 5 undefined on input line 188.
 
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 166.
-
-[3]
-
-LaTeX Warning: Reference `' on page 4 undefined on input line 202.
-
-
-LaTeX Warning: Reference `' on page 4 undefined on input line 229.
-
-[4]
-
-LaTeX Warning: Reference `' on page 5 undefined on input line 284.
+LaTeX Warning: Reference `' on page 5 undefined on input line 189.
 
 [5]
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 295.
+LaTeX Warning: Reference `' on page 6 undefined on input line 191.
 
-[6] [7] (rapport.aux)
+
+LaTeX Warning: Reference `' on page 6 undefined on input line 227.
+
+[6]
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 254.
+
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 309.
+
+[7]
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 320.
+
+[8] [9]
+Chapitre 4.
+[10
+
+]
+Chapitre 5.
+[11
+
+] (rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3182 strings out of 427834
- 44412 string characters out of 3148501
- 121375 words of memory out of 3000000
- 7152 multiletter control sequences out of 15000+200000
- 34953 words of font info for 34 fonts, out of 3000000 for 9000
+ 3203 strings out of 427834
+ 44752 string characters out of 3148501
+ 122822 words of memory out of 3000000
+ 7171 multiletter control sequences out of 15000+200000
+ 43948 words of font info for 37 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  28i,5n,32p,223b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on rapport.pdf (7 pages).
+Output written on rapport.pdf (11 pages).

@@ -34,7 +34,7 @@
 %Le concept de module dans une architecture client-serveur représente
 %un ensemble d'éléments côté client interagissant avec d'autres
 %éléments côté serveur.
-Un module est une application métier \footnote{A expliquer} basée sur
+Un module est une application métier\footnote{A expliquer} basée sur
 l'architecture client-serveur. Nous nous référons au terme module pour
 indiquer le caractère modulaire que peut prendre une application. Par
 exemple,la gestion des resources humaines est un assemblage de
@@ -44,7 +44,8 @@ embaûches \footnote{donner la liste complète si possible}.
 
 L'architecture client-serveur, implique qu'un module est composé
 d'une application {\em client} et d'une application {\em serveur}.
-L'application client est une interface graphique permettant à
+L'application client est une interface graphique\footnote{spécifier
+  pourquoi c'est une interface graphique } permettant à
 aux utilisateur d'interagir avec un système d'information.
 %faut il parler des single page ?
 L'application serveur est celle qui gère les données métiers dans un
@@ -55,49 +56,56 @@ données et les processus métiers.
 \subsection{Le portail applicatif des modules}
 %penser à definir la   %notion de SPA, s'assurer que module est
 %défini%
-
-Le concept du portail applicatif est de fournir l'environnement
-d'installation et d'utilisation \footnote{Donner l'exemple des
-  application PAE} des applications générées à partir de
-notre générateur. Il représente le moule qui donne au développeur, un
-apperçu d'à quoi va ressembler son application à l'installation. 
-
-L'interface du  portail applicatif se décline dans la figure suivante.
-Elle est subdivisée en 6 parties à savoir :
+C'est l'interface principale\footnote{parler du PAE} permettant de présenter les différentes
+fonctionnalités des modules. Comme le montre la figure \ref{}, elle
+est divisée en six parties à savoir :
 
 \begin{itemize}
-\item 1- Cette partie indique le nom du module installé
-\item 2- 
-\item 3- {\tt Menus}, il s'agit de la liste des menus du module
-\item 4- {\tt Linked modules}, liste des modules liés au module
-  installé \footnote{expliquer la liaison de module}
-\item 5- {\tt Workspace}, 
-\item 2-
+\item La barre d'entête (cf. le chiffre 1 sur la figure \ref{}). Cette
+  partie indique le nom du module courant, la liste des tâches à
+  réaliser et la liste des modules.
+\item  Le bloc de menus  (cf. le chiffre 2 sur la figure \ref{}). Il
+  présente les différents éléments du menu d'un module.
+\item Le bloc des modules liées  (cf. le chiffre 3 sur la figure
+  \ref{}). Présente la liste des modules en lien avec le module courant.
+\item  L'espace de travail  (cf. le chiffre 4 sur la figure
+  \ref{}).
+  
+\item La barre d'actions  (cf. le chiffre 5 sur la figure \ref{}). 
  
 \end{itemize}
+
+L'nterface est basée sur la notion d'applications
+monopages\footnote{Aussi nommée Single Page Application (SPA) }.
+De ce fait, les parties une, deux, trois et cinq sont statiques alors
+que la partie 4 est dynamique. Les éléments des parties statiques
+changent avec l'installation d'un nouveau module.
    
-\subsubsection{Installation du module}
-Le protail applicatif est en quelques sorte le squelette des
-applications. Ceci se décline dans la figure ...
+\paragraph{Actions versus menu.}
+Les éléments du menu permettent de naviguer à travers les
+différentes vues d'un module alors que les actions permettent de
+faire des opérations sur les éléments de la vue courante. D'un point
+de vue technique, la différence se trouve au niveau des composants avec
+lesquels ils sont implmentés : les menus sont implémentés   sous forme
+de liens et les actions boutons. 
 
-Après s'être connecter, l'utilisateur installe le module/l'application 
-qu'il veut utiliser. L'installation consiste à remplir les différentes
-parties du portail. Ainsi, on a:
+\paragraph{Liste des modules versus modules liés}
+La liste des modules de la barre d'entête représente l'ensemble des
+modules installés sur le système tandisque la liste des modules liés
+représente les dépendances entre différents modules. Les modules de
+gestion de stocks et d'achats sont liés ou dépendent du module de la
+gestion des articles. Dans ce cas de figure, le module gestion des
+articles aura dans sa liste de modules liés les modules stocks et
+achats. L'intérêt principal des modules liés est d'éviter à
+l'utilisateur, d'aller chercher un module parmi une liste de module
+qui peut vite être conséquent.
 
-\begin{itemize}
-\item 1- Le nom du module;
-\item 2- Lien d'accès au dashboad du module;
-\item 3- Emplacement des menus du module;
-\item 4- Les liens vers les modules liés au module installé;
-\item 5- Barre d'opérations, où se placent les actions de la page
-  courante du module;
-\item 6- L'espace de travail, où s'interchangent les différentes pages
-  du module
-\end{itemize}
+\paragraph{L'installation d'un module.}
+Elle consiste, pour un module donné, à  fournir les éléments de
+parties statiques. ces dernières sont ensuite positionnées dans leur
+bloc respectif.
 
 \subsection{Le principe générale}
-
-
 %A completer
 %parler de productivité générale
 %donner tout ce qui contribut à l'amélioration de cette dernière
@@ -113,17 +121,14 @@ focaliser sur la conception de leurs modules.
 Nous regroupons les éléments du module en deux catégories : ceux {\em
   côté client } et ceux {\em côté serveur}.
 Les éléments côté client sont ceux qui sont nécessaires pour la mise
-en place d'une architecture (MVC). Ils permettent de définir les
+en place de l'interface principale. Ils permettent de définir les
 différentes pages ou vues html ainsi que les services qui permettent
 de recupérer les données du serveur.
 Les éléments côté serveur permettent de définir les bases de données,
-les processus métiers et ressources permettant d'interagir avec le client.
+les processus métiers et ressources permettant d'interagir avec le
+client.
 
-
-
-
-
-
+\paragraph{Productivité.}
 
 
 \section{La présentation des éléments graphiques côté client}
@@ -188,7 +193,7 @@ d'arbre afin de mieux schématiser la hiérarchie induite par les
 composants conteneurs. La figure \ref{} représente l'arbre des
 composants de l'interface de la figure \ref{}.
 
-Notre concept se décline via l'inteface de la figure \ref{} dans
+Notre concept se décline via l'interface de la figure \ref{} dans
 laquelle on constate qu'un certains nombres d'actions sont associées à
 chaque composant. En effet pour permettre la réutilisation de codes
 nous proposons les cinq actions suivantes:
@@ -284,9 +289,8 @@ ou proviennent d'un cache lorsque l'attribut cache a pour valeur {\tt
 
 \subsubsection{ Les actions}
 
-Ils constituent un outil graphique permettant d'associer des actions
-à une vue donnée.
-
+Ils constituent un outil graphique permettant de spécifier les actions
+associées à une vue donnée.
 
 représentent une partie des fonctionnalités
 du module faisables à partir de la vue encours d'édition.  Pour
@@ -329,7 +333,7 @@ des éléments dans le menu par un simple déplacement dans la liste des vues.
 
 \subsubsection{Les resources}
 Le concept ici est de faciliter l'implémentation  des APIs
-REST. Ceci se décline dans l'interface de la figure suivante.  Elle
+REST. Ceci se décline dans l'interface de la figure \ref{}.  Elle
 est divisée en trois parties à savoir : la liste des ressources, les
 détails d'une ressource et les paramètres des ressources.
  \paragraph{La liste des ressources}.
@@ -356,6 +360,14 @@ Les opérations sont étroitement liées aux ressources
 
 
 \chapter{L'implémentation du générateur }
+\section {Les élément côté client}
+\subsection{L'arbre des composants}
+\subsection{Le générateur de code}
+\subsection{Les vues générées}
+\subsection{Les configs}
+\section{Les éléments côté serveur}
+\subsection{La représentation d'une ressource (basée sur le WADL) }
+\subsection{La liste des ressources}
 \chapter{conclusion}
 
 

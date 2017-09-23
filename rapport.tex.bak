@@ -1,10 +1,10 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[defaultsans]{opensans}
 \usepackage{enumitem}
 \usepackage{listings}
-\usepackage[frenchb]{babel}
+\usepackage[francais]{babel}
 
 \DeclareRobustCommand\ebseries{\fontseries{eb}\selectfont}
 \DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
@@ -18,12 +18,18 @@
 
 \begin{document}
 
-\section{Introduction}
+\chapter{Introduction}
 
-\section{blablabla}
+\chapter{Le contexte du travail}
+\section{Le cahier des charges ?}
+\section{L'architecture de la plateforme cible}
+\section{Le framework Angularjs ?}
+\section{Les ressources REST}
+\section{Le contrôle d'accès en utilisant des rôles (RBAC)}
 
-\section{Conception ...}
-\subsection{Le concept d'un module}
+\chapter{La Conception de notre générateur de module}
+\section{Le concept général}
+\subsection{Définition d'un module}
 
 %Le concept de module dans une architecture client-serveur représente
 %un ensemble d'éléments côté client interagissant avec d'autres
@@ -46,39 +52,29 @@ système d'information.
 La gestion des données est faite essentiellement via une base de
 données et les processus métiers. 
 
-L'idée du générateur est d'utiliser un environnement graphique
-permettant de spécifier les différents éléments nécessaires à
-l'implémentation des applications client et serveur, en vue d'augmenter
-la productivité générale \footnote{listing des productivités} d'un développeur. En effet, une fois les
-éléments spécifiés, nous passons à la génération automatique des codes
-des applications client serveur. Ceci permettra aux développeurs de se
-focaliser sur la conception de leurs modules.
+\subsection{Le portail applicatif des modules}
+%penser à definir la   %notion de SPA, s'assurer que module est
+%défini%
 
-Nous regroupons les éléments du module en deux catégories : ceux {\em
-  côté client } et ceux {\em côté serveur}.
-Les éléments côté client sont ceux qui sont nécessaires pour la mise
-en place d'une architecture (MVC). Ils permettent de définir les
-différentes pages ou vues html ainsi que les services qui permettent
-de recupérer les données du serveur.
-Les éléments côté serveur permettent de définir les bases de données,
-les processus métiers et ressources permettant d'interagir avec le client.
+Le concept du portail applicatif est de fournir l'environnement
+d'installation et d'utilisation \footnote{Donner l'exemple des
+  application PAE} des applications générées à partir de
+notre générateur. Il représente le moule qui donne au développeur, un
+apperçu d'à quoi va ressembler son application à l'installation. 
 
-\subsection{Conception du portail applicatif}
-%penser à definir la   %notion de SPA, s'assurer que module est défini%
- Le concept ici est
-d'implémenter une plateforme de de type portail d'application
-d'entreprise (PAE) par laquelle
-les utilisateurs d'une entreprise accèdent aux différentes
-applications de l'entreprise et aux données correspondantes en
-fonction de leur profil. l'idéale est donc de garantir la
-fluidité de la plateforme àfin d'améliorer l'expérience de navigation de
-l'utilisateur. A cet effet, elle est pensée single page application,
-application monopage, en gros, du lancement du portail jusq'à la fin de la
-session, une seule page charge dynamiquement les données en fonction
-de l'activité de l'utilisateur.Ceci lui de ne pas
-s'embrouiller et de ne pas confondre l'application installée et la
-plateforme d'accès. 
+L'interface du  portail applicatif se décline dans la figure suivante.
+Elle est subdivisée en 6 parties à savoir :
 
+\begin{itemize}
+\item 1- Cette partie indique le nom du module installé
+\item 2- 
+\item 3- {\tt Menus}, il s'agit de la liste des menus du module
+\item 4- {\tt Linked modules}, liste des modules liés au module
+  installé \footnote{expliquer la liaison de module}
+\item 5- {\tt Workspace}, 
+\item 2-
+ 
+\end{itemize}
    
 \subsubsection{Installation du module}
 Le protail applicatif est en quelques sorte le squelette des
@@ -99,11 +95,40 @@ parties du portail. Ainsi, on a:
   du module
 \end{itemize}
 
-\subsection{Overview}
+\subsection{Le principe générale}
 
 
-\subsection{Les éléments côté client}
+%A completer
+%parler de productivité générale
+%donner tout ce qui contribut à l'amélioration de cette dernière
+
+L'idée du générateur est d'utiliser un environnement graphique
+permettant de spécifier les différents éléments nécessaires à
+l'implémentation des applications client et serveur, en vue d'augmenter
+la productivité générale \footnote{listing des productivités} d'un développeur. En effet, une fois les
+éléments spécifiés, nous passons à la génération automatique des codes
+des applications client serveur. Ceci permettra aux développeurs de se
+focaliser sur la conception de leurs modules.
+
+Nous regroupons les éléments du module en deux catégories : ceux {\em
+  côté client } et ceux {\em côté serveur}.
+Les éléments côté client sont ceux qui sont nécessaires pour la mise
+en place d'une architecture (MVC). Ils permettent de définir les
+différentes pages ou vues html ainsi que les services qui permettent
+de recupérer les données du serveur.
+Les éléments côté serveur permettent de définir les bases de données,
+les processus métiers et ressources permettant d'interagir avec le client.
+
+
+
+
+
+
+
+
+\section{La présentation des éléments graphiques côté client}
 %parler du MVC (séparation des vues de la donnée)%
+\subsection{Overview}
 
 \subsubsection{Présentation de la vue générale}
 La vue générale se concentre sur les éléments côté client d'un
@@ -299,7 +324,7 @@ des éléments dans le menu par un simple déplacement dans la liste des vues.
  
 \paragraph{Droits d'accès}
 
-\subsection{Les éléments côté serveur}
+\section{La présentation des éléments graphiques côté serveur}
 
 
 \subsubsection{Les resources}
@@ -330,8 +355,8 @@ Les opérations sont étroitement liées aux ressources
  
 
 
-\section{Implémentation ...}
-\section{conclusion}
+\chapter{L'implémentation du générateur }
+\chapter{conclusion}
 
 
 \end{document} 
