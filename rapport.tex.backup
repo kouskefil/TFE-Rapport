@@ -456,7 +456,7 @@ Avant de procéder à la génération des codes html, nous avons préalablement
 défini un formalisme pour chaque élément html.on a donc :
 
 \begin{itemize}
- \item {\tt input }
+ \item {\tt input \\}
 
 \begin{lstlisting}
 <div  style="style"  class="class">
@@ -465,7 +465,7 @@ défini un formalisme pour chaque élément html.on a donc :
 </div> 
 \end{lstlisting}
 
-\item {\tt radio }
+\item {\tt radio \\}
 \begin{lstlisting}
 <div  >
   <label for="radio2">radio2</label>  
@@ -480,7 +480,7 @@ défini un formalisme pour chaque élément html.on a donc :
 </div>
 \end{lstlisting}
 
-\item {\tt textarea }
+\item {\tt textarea \\}
 \begin{lstlisting}
 <div class="form-group "  style="style"  class="class">
   <label for="textarea4">textarea</label>
@@ -489,7 +489,7 @@ défini un formalisme pour chaque élément html.on a donc :
 
 \end{lstlisting}
 
-\item {\tt select }
+\item {\tt select \\}
 \begin{lstlisting}
 <div  class="form-group">
   <select name="select5" id="select5" ng-model="null" class="form-control" >
@@ -501,25 +501,12 @@ défini un formalisme pour chaque élément html.on a donc :
 \end{lstlisting}
 
 
-\item {\tt label }
-\begin{lstlisting}
-
-<label style="css style" > Label </label> 
-
-<label> {{ label }} </label>
-
-\end{lstlisting}
-
-
-
-
-
 \end{itemize}
 
 
+
+
 \subsection{Les vues générées}
-
-
 
 \subsection{Les configs}
 
