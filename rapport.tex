@@ -7,6 +7,9 @@
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
 \usepackage[francais, english]{babel}
+\usepackage{parskip}
+\setlength{\parskip}{10pt plus 0pt minus 0pt}
+\usepackage[left=2cm,right=3cm]{geometry}
 
 \usepackage{color}
 \definecolor{editorLightGray}{cmyk}{0.05, 0.05, 0.05, 0.1}
@@ -52,10 +55,8 @@
 \section{Le cahier des charges ?}
 \section{L'architecture de la plateforme cible}
 \section{Le framework Angularjs ?}
-\includegraphics{images/angularjs.png}
 
-
-AngularJS est un framework écrit en javascript par Google libre et
+AngularJS\footnote{url de angular} est un framework écrit en javascript par Google libre et
 open-source qui permet d'améliorer, au même titre que JQUERY, la
 syntaxe de javascript ainsi que la productivité du
 développeur. Il étend le HTML pour le rendre dynamique, et permet de
@@ -93,20 +94,37 @@ incontournables dans le monde du développement web.
   application monopage, il peut utiliser le module {\tt ui-router}.
   \end{itemize}
   
-  Angularjs permet de réaliser des applications web en mode Single Page Application. 
+  Angularjs permet de réaliser des applications web en mode Single Page 
+  Application. 
   C'est à dire une seule page qui ne se recharge pas. L'idée de base est 
-  d'augmenter le langage HTML pour permettre la représentation des données métiers, 
-  qui sont elles traitées et gérées avec le langage Javascript. Depuis son avennement, 
-  plusieurs projets communautaires ont vu le jour dans le but de permettre la ficilitation de son 
-  utilisation et d'étendre ses fonctionnalités. C'est le cas de {\tt angular-UI} qui a
-  pour but de fournir des outils classiques  dans le développement web en reprennant leur
-  implémentation sans JQUERY.
-  Restangular est un projet communautaire permettant d'utiliser une REST API dans 
-  AngularJS sans avoir à faire soit même l'ensemble des opérations HTTP (GET/POST/PUT/DELETE).
-  Ce projet est très utilisé et très pratique. Il permet d'éviter la création de services pour
-  manipuler ce genre d'API.
+  d'augmenter le langage HTML pour permettre la représentation des données
+  métiers, qui sont à leur tour traitées et gérées avec le langage Javascript. 
+  Depuis son avennement, plusieurs projets communautaires ont vu le jour dans 
+  le but de permettre la ficilitation de son utilisation et d'étendre ses 
+  fonctionnalités. C'est le cas de {\tt angular-UI}\footnote{url duprojet angular-UI}
+  qui a pour but de fournir des outils classiques  dans le développement web en
+  reprennant leur implémentation sans JQUERY, nous en avons fais usage dans notre 
+  projet pour la réalisation des  interfaces. Restangular\footnote{url de restangular} 
+  est un projet communautaire permettant d'utiliser une REST API dans AngularJS 
+  sans avoir à faire soit même l'ensemble des opérations HTTP (GET/POST/PUT/DELETE).
+  Ce projet est très utilisé et très pratique. Il permet d'éviter la création
+  de services pour manipuler ce genre d'API. .................
+  
+  
 
 \section{Les ressources REST}
+Un API REST est un système D'URIs, les ressources déterminent la structure des URIs par 
+conséquent  la manière dont une application trouve les données qu'elle manipule.
+REpresentational State Transfer (REST) est un style d’architecture pour les systèmes
+distribués bâti sur des APIs permettants de centraliser des services partagés. Il est 
+donc évident que plusieurs applications technologiquement hétérogènes utilisent ces services
+via un réseau. Par exemple, on peut créer un compte Instagram\footnote{C'est quoi instagram}
+utilise avecles données de son compte facebook via un API de face
+
+
+
+
+
 \section{Le contrôle d'accès en utilisant des rôles (RBAC)}
 
 \chapter{La Conception de notre générateur de module}
@@ -138,9 +156,9 @@ données et les processus métiers.
 \subsection{Le portail applicatif des modules}
 %penser à definir la   %notion de SPA, s'assurer que module est
 %défini%
-C'est l'interface principale\footnote{parler du PAE} permettant de présenter les différentes
-fonctionnalités des modules. Comme le montre la figure \ref{}, elle
-est divisée en six parties à savoir :
+C'est l'interface principale\footnote{parler du PAE} permettant 
+de présenter les différentes fonctionnalités des modules. Comme
+le montre la figure \ref{}, elle est divisée en six parties à savoir :
 
 \begin{itemize}
 \item La barre d'entête (cf. le chiffre 1 sur la figure \ref{}). Cette
@@ -187,7 +205,7 @@ Elle consiste, pour un module donné, à  fournir les éléments de
 parties statiques. ces dernières sont ensuite positionnées dans leur
 bloc respectif.
 
-\subsection{Le principe générale}
+\subsection{Le principe générale \label{par:product}}
 %A completer
 %parler de productivité générale
 %donner tout ce qui contribut à l'amélioration de cette dernière
@@ -210,7 +228,30 @@ Les éléments côté serveur permettent de définir les bases de données,
 les processus métiers et ressources permettant d'interagir avec le
 client.
 
-\paragraph{Productivité.}
+\paragraph{Productivité. } Nous la définissons comme le temps nécesssaire à un
+dévelopeur pour implémenter, tester et pour déployer une
+application. Dans ce travail nous nous intéressons aux éléments qui
+font perdre du temps durant l'implémentation d'une application ; nous
+les avons regroupé comme suit :
+\begin{itemize}
+\item {\em les erreurs de syntaxe}. Beaucoup d'erreurs dans
+  l'implémentation d'une application sont dues à des erreurs de syntaxe
+  ou des erreurs de frappe dans le nom des fonctions ou des variables.
+\item {\em la recherche à l'aveugle}. Rechercher des informations
+  telles que la valeur d'une variable ou la définition d'une fonction
+  peut vite devenir fastidieux lorsqu'on travaille sur de grosses
+  applications.
+\item {\em code ennuyeux}. Les développeurs perdent beaucoup du temps
+  à chercher comment implémenter certain de leur concept dans des
+  langages qu'ils n'apprécient pas ou qu'ils ne maîtrisent. Ils
+  perdent aussi du temps à écrire plusieurs fois le même code.
+\item {\em distraction?}
+\end{itemize}
+
+Nos solutions pour améliorer la productivé des développeur tournent
+autour de la réutilisation, l'isolation , la génération et la
+modularité de code. Dans le reste du document nous allons ... bla bla
+bla.
 
 
 \section{La présentation des éléments graphiques côté client}
@@ -413,24 +454,68 @@ des éléments dans le menu par un simple déplacement dans la liste des vues.
 \section{La présentation des éléments graphiques côté serveur}
 
 
-\subsubsection{Les resources}
-Le concept ici est de faciliter l'implémentation  des APIs
-REST. Ceci se décline dans l'interface de la figure \ref{}.  Elle
-est divisée en trois parties à savoir : la liste des ressources, les
-détails d'une ressource et les paramètres des ressources.
- \paragraph{La liste des ressources}.
-Elle permet d'avoir une vue d'ensemble sur les ressources d'un module.
-Son organisation en arborescence facilite la détection d'incohérences
-liées aux URIs
-\paragraph{Les Détails d'une ressource.}
-Au delà de l'URI visible dans l'arborescence, on distingue dans  cette
-partie les informations liées à une ressource. Ces dernières peuvent
-être mise à jour en cliquant sur l'action {\tt update}.
+L'idée est de proposer un concept permettant le développement des APi
+restful de manière simple et conviviale. le développement des Api passe non
+seulement par la définition de chaque ressource mais aussi par la définition
+des fonctions ou méthodes associées aux différentes ressources.
 
-\paragraph{Les paramètres d'une ressource}
-Cette partie donne une vue d'ensemble des {\tt méthodes} d'une
-ressources et permet aussi d'en créer de nouvelles. Une méthode est la
-définition d'une opération sur la ressource.
+Dans cette section nous présentons la définition des ressources ainsi
+que les concepts que nous avons défini autours des ressources. Dans un
+premier temps, nous avons introduit les concepts d'{\em héritage} et
+de {\em déclencheur} dans la définition des ressources afin de
+faciliter la structuration des grosses applications et de renforces de
+manière générale la modularité de code. Dans un second temps nous
+avons implémenté une ressource pour réaliser le chainage de ressources
+et une autre pour l'indexation de données ; ceci afin de limiter la
+perte de temps due à la procrastination et les code ennuyeux
+(cf. paragraphe \ref{par:product})
+
+\subsubsection{La définition de ressources}
+
+Elle se fait via l'interface de la figure \ref{}. L'interface est
+composée de trois parties. la partie $1$ permet d'avoir une liste
+hiérachisée des ressources déjà déclarées tandis que les parties $2$
+et $3$ permettent, en isolant les ressources, de voir leur définition et
+de les compléter éventuellement.
+
+%%plus de détail si possible
+
+\subsubsection{L'héritage de ressources}
+
+L'idée est, d'une part, d'exploiter la définition et l'implémentation
+des ressources d'un module dans un autre module. D'autre part il nous
+permet de simplifier les droits d'accès aux ressources générique (à
+expliquer car pas trop clair). 
+
+Soient le module {\tt personne} et le module {\tt client} qui hérite
+de {\tt personne}. Les tables \ref{} et \ref{} présentent
+respectivement les ressources de {\tt personne} et ceux heritées de
+{\tt client}. Un client étant une personne, nous pouvons alors utiliser 
+l'implémentation des resources du module {\tt personne} pour avoir la 
+liste des clients. La particularité de l'héritage est que l'uri des ressources
+de {\tt client} n'ont pas la même base que ceux des ressources {\tt personne} ;
+ceci permet  au module {\tt client} de spécifier ses propres droits d'accès 
+sur les ressources provenant de {\tt personne}. Ce type de gestion des droits
+nous permet d'éviter l'attribution de droits trop complexe et pas toujours efficace.
+En effet, si les modules {\tt travailleur}  et {\tt client} héritent de {\tt personne},
+il sera impossibe pour un utilisateur ayant uniquement des droits sur {\tt travailleur}
+d'accéder aux ressources {\tt client}. Si nous mettons des droits sur les ressources
+de {\tt personne}, tout utilisateur ayant les droits sur {\tt travailleur} devra aussi
+avoir des droits sur {\tt personne}, ce qui lui permettra par un effet de bord d'accéder
+aux ressources de clients sans y avoir les droits.
+
+
+\subsubsection{Déclencheur}
+
+C'est un mécanisme permettant de faire exécuter des tâches en arrière plan 
+après une exécution réussie d'une ressource, sur le serveur. Par exemple,
+après une authentification réussie, il est possible de déclencher des tâches sur 
+l'utilisateur en utilisant un déclencheur.
+
+
+\subsubsection{Ressources chaînées}
+\subsubsection{La ressource d'indexation}
+
 
 \subsubsection{Les opérations}
 Les opérations sont étroitement liées aux ressources
@@ -438,95 +523,118 @@ Les opérations sont étroitement liées aux ressources
 \subsubsection{Les données Externes}%base de données + process%
 
 
-\chapter{L'implémentation du générateur }
+\chapter{Implémentation}
 
-\section {Les élément côté client}
+\section{Introduction}
 
-\subsection{L'arbre des composants}
+\section{La structure interne d'un module}
+
+%mettre une figure
+\ref{}
+Comme on le voit dans la figure ...., à l'issue de la conception graphique d'un
+module, nous obtenons un grand objet json dont les attributs/membres 
+
+\subsection{Les dépendances}
+
+C'est la collection des modules dont dépend un module. En effet, un module peut
+être lié à un ou plusieurs autres modules, selon le type de liaison,
+on parle d'héritage, ou de simple dépendance. L'héritage pour le moment se résume 
+à l'utilisation des ressources du module hérité. La dépendance consiste à charger 
+le module concerné lors de l'utilisation du module qui en dépend.
+
+\subsection{Les vues}
+La collection {\tt vues} d'un module, représente l'ensemble des vues du module
+y compris les différents éléments nécessaire à la génération des contrôleurs,
+des services, des variables et de la configuration de la vue. 
 
 
-\subsection{Le générateur de code}
+\subsection{Les ressources}
 
-Après la conception d'un module sous le format json, vient l'étape de sa génération.
-la génération des différents codes du module consiste à matérialiser les fichiers
-des parties client et serveur du module concerné.
+C'est l'ensemble des ressources du module y compris celles qui sont héritées 
+d'un autre module. la structure json nous permet de reconstituer un uri à
+partie de ses parents successifs. chaque niveau contient ses paramètres et 
+aussi si possible une collection de sous ressources.
 
-\paragraph{génération des vues. }
-Avant de procéder à la génération des codes html, nous avons préalablement
-défini un formalisme pour chaque élément html.on a donc :
+\subsection{Les opérations}
+
+Ce sont les opérations liées aux méthodes des ressources. 
+
+
+\section{Le principe de la génération}
+
+
+
+\subsection{les contrôleurs}
+
+Les contrôleurs sont générés à partir des variables et des fonctions. Par conséquent,
+les variables enregistrées au niveau de la vue générale sont parcourues et déclarées 
+dans le contrôleur, ensuite viens les fonctions. Nous affectons le nom de chaque vue
+du module à son contrôleur. c'est ce nom qui sera renseigné au niveau du paramètre 
+\og contrôleur de l'état auquel il est rattaché \fg.
+
+\subsection{Les services}
+
+Les services sont générés à partir des actions déclarées au niveau de la vue 
+générale. Par conséquent, nous parcouront toutes les vues du module tout en générant 
+leurs actions respectives dans un fichier nommé .....
+
+\subsection{Configuration des (routes) états}
+
+Nous faisons la configuration des états dans le fichier configs du module généré, à l'aide de 
+{\tt ui-router}\footnote{présenter ui-router}, un module tiers de angularjs. En effet, nous
+déclarons un état en spécifiant deux paramètres à la méthode {\tt state} de ui-router. Le premier 
+paramètre est le nom de l'état, celui fourni au niveau des configs de la vue par le paramètre state
+. Le deuxieme paramètre est un objet json dont les membres varient en fonction des paramètres renseignés 
+au niveau des configs de la vue. Toute fois, trois de ces paramètres sont obligatoires, il s'agit de 
+l'{\tt url} de l'état, du {\tt template} ou  {\tt templateUrl} de la vue associée  selon qu'il s'agisse 
+soit du code html en dure, soit du chemin d'un fichier html et du {\tt contrôleur} associé à l'état. %parler des contrôleurs inline
+Si spécifier, nous completons le paramètre {\tt onEnter}, ce dernier permet de faire des initialisations avant 
+le chargement du contrôleur et de la vue de l'état. Pareil pour le paramètre {\tt resolve}, ce dernier permet 
+de faire des traitements spécifiques avant le chargement du contrôleur.
+
+
+\section{La présentation du générateur sous forme de module}
+
+
+
+\subsection{Les vues}
+%% faire un rappel du menu du module et présenter les actions/vues
+
+Le module \og generator \fg compte 5 vues accessible chacune par une option du 
+menu. 
+Il s'agit de :
 
 \begin{itemize}
- \item {\tt input }
 
-\begin{lstlisting}
-<div  style="style"  class="class">
-  <label for="input1">input1</label>
-  <input class=" form-control" name="input1" id="input1" type="text" ng-model="model"/>
-</div> 
-\end{lstlisting}
-
-\item {\tt radio }
-\begin{lstlisting}
-<div  >
-  <label for="radio2">radio2</label>  
-    <div  style="style"  class="class">    
-      <label class=" radio-inline">
-	<input id="radio2" type="radio" value="toto" ng-model="genre"> toto
-      </label>      
-      <label class=" radio-inline">
-	<input id="radio2" type="radio" value="tata" ng-model="genre"> tata
-      </label>      
-    </div>
-</div>
-\end{lstlisting}
-
-\item {\tt textarea }
-\begin{lstlisting}
-<div class="form-group "  style="style"  class="class">
-  <label for="textarea4">textarea</label>
-  <textarea id="textarea4" class="form-control" name="textarea4" ng-model="model"></textarea>
-</div>
-
-\end{lstlisting}
-
-\item {\tt select }
-\begin{lstlisting}
-<div  class="form-group">
-  <select name="select5" id="select5" ng-model="null" class="form-control" >
-    <option ng-repeat='item in items' value="{{item.rvalue}}"> {{item.dvalue}} 
-    </option>
-  </select>
-</div>
-
-\end{lstlisting}
-
-
-\item {\tt label }
-\begin{lstlisting}
-
-<label style="css style" > Label </label> 
-
-<label> {{ label }} </label>
-
-\end{lstlisting}
-
-
-
-
-
+ \item view \\
+ \\
+ \includegraphics [width=0.90\textwidth] {./images/view.png}
+ 
+  \item operations \\
+ \\
+ \includegraphics [width=0.90\textwidth] {./images/operations.png}
+ 
+ \item resources \\
+ \\
+ \includegraphics [width=0.90\textwidth] {./images/resources.png}
+ 
 \end{itemize}
 
 
-\subsection{Les vues générées}
+
+\subsubsection{Le générateur de vues}
+
+\subsection{Les ressources}
+%% présenter les différentes ressources et leurs opérations associées
 
 
+\subsection{La base de données}
 
-\subsection{Les configs}
+\subsection{La collaboration}
+%% parler de gitolite et de la manière dont on crée des branches pour
+%% le module
 
-\section{Les éléments côté serveur}
 
-\subsection{La représentation d'une ressource (basée sur le WADL) }
-\subsection{La liste des ressources}
 \chapter{conclusion}
 
 
