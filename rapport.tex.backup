@@ -2,47 +2,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
-\usepackage[defaultsans]{opensans}
+\usepackage{array}
 \usepackage{enumitem}
 \usepackage{listings}
 \usepackage[utf8]{inputenc}
-\usepackage[francais, english]{babel}
+\usepackage[francais]{babel}
 \usepackage{parskip}
 \setlength{\parskip}{10pt plus 0pt minus 0pt}
-\usepackage[left=2cm,right=3cm]{geometry}
-
-\usepackage{color}
-\definecolor{editorLightGray}{cmyk}{0.05, 0.05, 0.05, 0.1}
-\definecolor{editorGray}{cmyk}{0.6, 0.55, 0.55, 0.2}
-\definecolor{editorPurple}{cmyk}{0.5, 1, 0, 0}
-\definecolor{editorWhite}{cmyk}{0, 0, 0, 0}
-\definecolor{editorBlack}{cmyk}{1, 1, 1, 1}
-\definecolor{editorOrange}{cmyk}{0, 0.8, 1, 0}
-\definecolor{editorBlue}{cmyk}{1, 0.6, 0, 0}
-\definecolor{editorPink}{cmyk}{0, 0.6745, 0.5608, 0}
-
- \lstset{
-  language=html,
-  tagstyle=\color{editorBlue},
-  basicstyle={\small\ttfamily},
-  identifierstyle=\color{editorOrange},
-  keywordstyle=\color{editorPink},
-  commentstyle=\color{editorGray},
-  stringstyle=\color{editorPurple}
-}
+\usepackage[left=2cm, right=3cm]{geometry}
 
 \usepackage{upquote}
-\usepackage{listings}
-
-\DeclareRobustCommand\ebseries{\fontseries{eb}\selectfont}
-\DeclareRobustCommand\sbseries{\fontseries{sb}\selectfont}
-\DeclareRobustCommand\ltseries{\fontseries{l}\selectfont}
-\DeclareRobustCommand\clseries{\fontseries{cl}\selectfont}
-
-\DeclareTextFontCommand{\texteb}{\ebseries}
-\DeclareTextFontCommand{\textsb}{\sbseries}
-\DeclareTextFontCommand{\textlt}{\ltseries}
-\DeclareTextFontCommand{\textcl}{\clseries}
 
 
 \begin{document}
@@ -57,59 +26,23 @@
 \section{Le framework Angularjs ?}
 
 AngularJS\footnote{url de angular} est un framework écrit en javascript par Google libre et
-open-source qui permet d'améliorer, au même titre que JQUERY, la
-syntaxe de javascript ainsi que la productivité du
-développeur. Il étend le HTML pour le rendre dynamique, et permet de
-développer ses propres balises et attributs HTML. C’est un framework
-qui se veut extensible et qui pousse vers un développement structuré, 
-en couches, le but n’étant pas d’ajouter de simples animations au DOM,
-mais bien d’apporter un aspect applicatif au front-end.
-
+open-source qui permet d'améliorer  la syntaxe de javascript ainsi que la productivité du
+développeur. Il étend le HTML pour le rendre dynamique, et permet de développer ses propres
+balises et attributs HTML. C’est un framework qui se veut extensible et qui pousse vers un 
+développement structuré, en couches, le but n’étant pas d’ajouter de simples animations au
+DOM, mais bien d’apporter un aspect applicatif au front-end. AngularJS est construit autour
+de concepts 
+\subsection{Pourquoi angularJS}
 
 \subsection{Concept}
 Angular est construit autour de concepts et de bonnes pratiques
 incontournables dans le monde du développement web.
 
 \begin{itemize}
- \item Architecture {\tt Modèle-Vue-Contrôller} (MVC) :
-  si vous connaissez le développement, vous avez sûrement entendu parler
-  de ce type d'architecture incontournable qui consiste à avoir une stricte
-  séparation entre les données (Modèle), la présentation des données (Vue),
-  et les actions que l'on peut effectuer sur ces données (Contrôleur).
-  \item Le {\tt data-binding bidirectionnel} est un moyen de lier la partie vue
-  à la partie logique. En d'autres termes, grâce à cela, les éléments de 
-  votre code HTML seront liés à votre contrôleur JavaScript est rendu 
-  possible grâce au scope.  Le scope est le “liant” d’une application AngularJS,
-  c’est lui qui contient les variables et fonctions qui font la liaison entre vues 
-  et contrôleurs (ou autres). Il permet donc aux données de pouvoir être mises à 
-  jour par les vues et par le modèle.
-  \item {\tt L’injection de dépendances} permet de charger certaines parties de 
-  l’application seulement quand c’est nécessaire.
-  \item La manipulation du DOM au moyen de directives : AngularJS dispose d'un grand
-  nombre de directives permettant de manipuler le DOM et offre aussi la possibilité 
-  aux dévelopeurs d'écrire leurs propres directives.
-  \item Le Routage, le module de routage de Angularjs est l'un des composants clés 
-  lui permettant de créer des applications {\tt Single Page Application} (SPA). En effet,
-  si le développeur veut pouvoir naviguer sur plusieurs pages et en même temps en faire une
-  application monopage, il peut utiliser le module {\tt ui-router}.
-  \end{itemize}
-  
-  Angularjs permet de réaliser des applications web en mode Single Page 
-  Application. 
-  C'est à dire une seule page qui ne se recharge pas. L'idée de base est 
-  d'augmenter le langage HTML pour permettre la représentation des données
-  métiers, qui sont à leur tour traitées et gérées avec le langage Javascript. 
-  Depuis son avennement, plusieurs projets communautaires ont vu le jour dans 
-  le but de permettre la ficilitation de son utilisation et d'étendre ses 
-  fonctionnalités. C'est le cas de {\tt angular-UI}\footnote{url duprojet angular-UI}
-  qui a pour but de fournir des outils classiques  dans le développement web en
-  reprennant leur implémentation sans JQUERY, nous en avons fais usage dans notre 
-  projet pour la réalisation des  interfaces. Restangular\footnote{url de restangular} 
-  est un projet communautaire permettant d'utiliser une REST API dans AngularJS 
-  sans avoir à faire soit même l'ensemble des opérations HTTP (GET/POST/PUT/DELETE).
-  Ce projet est très utilisé et très pratique. Il permet d'éviter la création
-  de services pour manipuler ce genre d'API. .................
-  
+ \item 
+\end{itemize}
+
+   
   
 
 \section{Les ressources REST}
@@ -529,68 +462,385 @@ Les opérations sont étroitement liées aux ressources
 
 \section{La structure interne d'un module}
 
-%mettre une figure
-\ref{}
-Comme on le voit dans la figure ...., à l'issue de la conception graphique d'un
-module, nous obtenons un grand objet json dont les attributs/membres 
+Nous utilisons un document json pour le stockage des différents éléments d'un module.
+Le document json est organisé autour des 5 attributs  présentés dans la table \ref{si:mod}.
+L'attribut {\tt name} est une chaîne de caractères représentant  le nom du module tandis que
+les attributs {\tt models},{ \tt ressources}, {\tt opérations} et {\tt dependencies} sont des tableaux 
+représentant respectivement les  vues,  les ressources, les opérations et les dépendances. Comme 
+le montre la figure \ref{tab:json}, seuls les éléments de l'attribut {\tt dependencies} sont optionnels ; 
+le tableau des dépendances peut donc rester vide.
+
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+  \hline
+     Attributs &Types & Optionnel\\
+   \hline
+    name &  string &  $-$\\
+     \hline
+    models & array & $-$\\
+     \hline
+    ressources & array & $-$ \\
+     \hline
+    operations & array &  $-$\\
+     \hline
+    dependencies & array & oui \\
+     \hline    
+\end{tabular}
+\caption{Les attributs du document json permettant de stocker un module. \label{si:mod} }
+\end{table}
 
 \subsection{Les dépendances}
 
-C'est la collection des modules dont dépend un module. En effet, un module peut
-être lié à un ou plusieurs autres modules, selon le type de liaison,
-on parle d'héritage, ou de simple dépendance. L'héritage pour le moment se résume 
-à l'utilisation des ressources du module hérité. La dépendance consiste à charger 
-le module concerné lors de l'utilisation du module qui en dépend.
+Le tableau {\tt dependencies} représente la liste des modules dont dépend un module.
+Une dépendance est représentée par un objet doté de l'attribut {\tt name}, représentant  le nom d'un module et de l'attribut
+ {\tt type} représentant le type de dépendance. L'attribut {\tt type} est optionnel et ne peut avoir  que  \og inherited \fg comme 
+ valeur pour spécifier un héritage. Par défaut lorsque rien n'est spécifié, la dépendance est considérée comme une dépendance normale. 
 
-\subsection{Les vues}
-La collection {\tt vues} d'un module, représente l'ensemble des vues du module
-y compris les différents éléments nécessaire à la génération des contrôleurs,
-des services, des variables et de la configuration de la vue. 
+\subsection{Les vues  \label{vues}}
+
+\begin{figure}[tbp]
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+
+\begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   num &  integer & $-$\\
+   \hline
+   id  & string & $-$ \\
+    \hline
+   label & string & $-$ \\
+   \hline
+   state & string  & $-$  \\
+   %\hline
+   %templateUrl & object & $-$ \\
+   \hline
+   url & string & $-$ \\
+   \hline
+   icon & string & $-$ \\
+   \hline
+   children &  array & oui \\
+   \hline
+   functions & array & oui  \\
+   \hline
+   variables & array & oui  \\
+   \hline
+   actions & array & oui  \\
+   \hline
+ \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une vue. \label{si:vue} }
+\end{center}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name &  string & $-$\\
+   \hline
+   role  & string & oui \\
+    \hline
+   icon & string & oui \\
+   \hline
+   action & string  & oui  \\
+    \hline
+ \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:act} }
+\end{center}
+\end{minipage}
+
+\end{figure}
+
+%\begin{table}[ht]
+% \begin{tabular}{|c|c|c|}
+%   \hline
+%   Attributs & Types & Optionnel \\
+%   \hline
+%   num &  integer & $-$\\
+%   \hline
+%   id  & string & $-$ \\
+%    \hline
+%   label & string & $-$ \\
+%   \hline
+%   state & string  & $-$  \\
+%   %\hline
+%   %templateUrl & object & $-$ \\
+%   \hline
+%   url & string & $-$ \\
+%   \hline
+%   icon & string & $-$ \\
+%   \hline
+%   children &  array & oui \\
+%   \hline
+%   functions & array & oui  \\
+%   \hline
+%   variables & array & oui  \\
+%   \hline
+%   actions & array & oui  \\
+%   \hline
+% \end{tabular}
+% \caption{Les attributs de l'objet  json permettant de stocker une vue. \label{si:vue} }
+%\end{table}
+
+%\begin{table}[ht]
+% \begin{tabular}{|c|c|c|}
+%   \hline
+%   Attributs & Types & Optionnel \\
+%   \hline
+%   name &  string & $-$\\
+%   \hline
+%   role  & string & oui \\
+%    \hline
+%   icon & string & oui \\
+%   \hline
+%   action & string  & oui  \\
+%    \hline
+% \end{tabular}
+% \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:act} }
+%\end{table} 
+
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name &  string & $-$\\
+   \hline
+   cache  & string & oui \\
+    \hline
+   service & string & oui \\
+   \hline
+   value & string  & oui  \\
+    \hline
+ \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:var} }
+\end{table} 
+
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name &  string & $-$\\
+   \hline
+   content  & string &  $-$ \\
+    \hline
+  \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:fun} }
+\end{table} 
+
+Le tableau {\tt models} représente l'ensemble des vues d'un module. Une vue est 
+caractérisée par un objet json dont les attributs sont décrits dans le  tableau\ref{si:vue}.
+Les différents attributs de la vue peuvent être regroupés en trois catégories : 
+
+\begin{itemize}
+  \item {\em configuration.}
+ Les attributs {\tt state},{\tt label}, {\tt url}, {\tt icon} et {\tt actions}, représentant respectivement
+ l'état, le nom, l'url , l'icône et les actions associées à la vue, sont les éléments nécessaires lors de la génération
+  de la configuration.
+ \item {\em model.} 
+ L'attribut {\tt children}, représentant la liste des composants d'une vue, est l'élément nécessaire à la génération des pages html. 
+ \item {\em controller.}
+ Les attributs {\tt functions} et {\tt variables}, représentant respectivement les fonctions et les variables associées
+ à une vue, sont nécessaires à la génération des contrôleurs.
+\end{itemize}
+
+
+L' attribut  {\tt actions} est un tableau d'objets dont les attributs sont présentés dans la table \ref{si:act}.
+Les attributs {\tt name} et {\tt icon} représentent les éléments visibles de la barre  des actions (cf. \ref{reference vers la barre des actions}).
+L'attribut {\tt action } représente le code à exécuter tandis que {\tt role} représente le droit qu'un utilisateur doit avoir pour faire cette action.
+
+L' attribut  {\tt variables} est un tableau d'objets dont les attributs sont présentés dans la table \ref{si:var}.
+Les attributs{\tt name} et {\tt value } sont nécessaires à la déclaration de la variable. Si la valeur de l'attribut {\tt resolve} est faux 
+alors la déclaration est faite lors de la génération du contrôleur, sinon elle est faite lors de la génération de la config. Au cas où la 
+déclaration est faite dans le contrôleur, si l'attribut {\tt local} est vrai, alors la variable sera générée comme une variable locale. Si
+l'attribut {\tt async} est vrai, alors il faut préciser le nom du service qui permet de récupérer la valeur de la variable avec l'attribut 
+{\tt service}.
+
+L' attribut  {\tt functions} est un tableau d'objets dont les attributs sont présentés dans la table \ref{si:fun}.
+pour générer une fonction, il faut deux attributs obligatoires que sont {\tt name} et {\tt content} représentant
+respectivement le nom et le contenu de la fonction.
+
+L'attribut {\tt children} est un tableau d'objet  dont les attributs sont présentés dans la table \ref{si:chi}.
+l'attribut {\tt type} représente le type du composant html, et les attributs {\tt style } et {\tt class} représentent
+l'habillage css du composant. L'attribut {\tt children} représente le tableau de sous-composants d'un conteneur.
+Mis à part les attributs cités, chaque composant peut  insérer dans l'objet des attributs qui lui sont propres.
 
 
 \subsection{Les ressources}
 
-C'est l'ensemble des ressources du module y compris celles qui sont héritées 
-d'un autre module. la structure json nous permet de reconstituer un uri à
-partie de ses parents successifs. chaque niveau contient ses paramètres et 
-aussi si possible une collection de sous ressources.
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   path  & string &  $-$ \\
+    \hline
+   parents &  string & oui\\
+    \hline
+   resources &  array & oui\\
+    \hline
+   methods &  array & oui\\
+    \hline
+    
+  \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:res} }
+\end{table} 
+
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name  & string &  $-$ \\
+    \hline
+   id &  string & $-$\\
+    \hline
+   requests &  array & oui\\
+    \hline
+   responses &  array & oui\\
+    \hline
+   role  & string &  oui \\
+    \hline
+   type &  string & oui\\
+    \hline
+   trigger &  array & oui\\
+    \hline
+     
+  \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:res} }
+\end{table}
+
+\begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name  & string &  $-$ \\
+   \hline
+   from  & string &  $-$ \\
+    \hline
+  \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:res} }
+\end{table} 
+ 
+Le tableau {\tt resources} représente l'ensemble des ressources REST d'un module. Une ressource est 
+caractérisée par un objet json dont les attributs sont décrits dans le  tableau\ref{si:res}. Les attributs 
+{\tt resources} et {\tt parent } sont les éléments nécessaires pour la gestion de l'arborescence. En effet l'attribut
+{\tt resources} est un tableau de mes objets que celui nous sommes en train de décrire. L'attribut {\tt path} représente l'uri d'une ressource. tandis que l'attribut {\tt methods}
+représente les méthodes associées à la dite ressource.
+
+L' attribut  {\tt methods} est un tableau d'objets dont les attributs sont présentés dans la table \ref{si:met}.
+ Les attributs {\tt name}, {\tt id},  {\tt requests}, {\tt responses} sont les éléments de définition d'une ressource 
+ classique. L'attribut {\tt role} permet de définir un droit d'accès sur la ressource. L'attribut {\tt type} représentant
+ le type de ressource, est un élément nécessaire dans la génération du code (côté serveur). Il peut prendre les valeurs
+ \og request \fg, \og command \fg, \og reply \fg, \og empty \fg, \og inheritance \fg et  \og inherited\fg. L'attribut {\tt trigger}
+ représente une ressource à exécuter en tâche de fond.
+ 
+L'attribut trigger est un objet caractérisé par l' attribut {\tt name}, représentant le 
+nom de l'opération à exécuter, et l'attribut {\tt from}, représentant le nom du module de provenance.
 
 \subsection{Les opérations}
 
-Ce sont les opérations liées aux méthodes des ressources. 
+
+
+Le tableau {\tt operations} représente l'ensemble des opérations associées aux ressources d'un module.
+Une opération est caractérisée par un objet json dont les attributs sont décrits dans le  tableau\ref{si:ope}.
+
+ \begin{table}[ht]
+ \begin{tabular}{|c|c|c|}
+   \hline
+   Attributs & Types & Optionnel \\
+   \hline
+   name  & string &  $-$ \\
+   \hline
+   type  & string &  $-$ \\
+    \hline
+   reply  & string &  $-$ \\
+    \hline
+      sql  & object &  oui \\
+    \hline
+      in  & array &  $-$ \\
+    \hline
+  \end{tabular}
+ \caption{Les attributs de l'objet  json permettant de stocker une variable. \label{si:res} }
+\end{table} 
 
 
 \section{Le principe de la génération}
 
+\subsection{Les contrôleurs}
+
+La génération des contrôleurs consiste dans un premier temps, à parcourir le tableau des variables pour en extraire les
+dépendances  à injecter dans l'entête du contrôleur. Nous déclarons ensuite les variables suivi de la définition des fonctions.
+Nous générons le tout dans un fichier dont le nom est la concaténation de l'attribut {\tt label} et du mot \og Ctrl \fg .
 
 
-\subsection{les contrôleurs}
+\begin{verbatim}
+$scope.HTMLcomponents = HTMLcomponents;
+$scope.model = globalVarFactory.getModule().models;
+\end{verbatim}
 
-Les contrôleurs sont générés à partir des variables et des fonctions. Par conséquent,
-les variables enregistrées au niveau de la vue générale sont parcourues et déclarées 
-dans le contrôleur, ensuite viens les fonctions. Nous affectons le nom de chaque vue
-du module à son contrôleur. c'est ce nom qui sera renseigné au niveau du paramètre 
-\og contrôleur de l'état auquel il est rattaché \fg.
+La figure \ref{} est un exemple de génération des variables présentées à la figure \ref{}.
+Comme on peut le constater, la génération se fait simplement en mettant les noms des variables comme attribut dans le scope 
+et en leur attribuant comme valeur celle de l'attribut {\tt value} ou service.   Lorsque l'attribut {\tt resolve} a pour valeur vrai, la 
+valeur de la variable  provient alors de la  dépendance injectée dans l'entête ; c'est le cas de notre variable {\tt HTMLcomponents}.
 
 \subsection{Les services}
 
-Les services sont générés à partir des actions déclarées au niveau de la vue 
-générale. Par conséquent, nous parcouront toutes les vues du module tout en générant 
-leurs actions respectives dans un fichier nommé {\tt [nom_module]Actions.js}.
+La génération des services consiste à créer un objet dont les attributs sont les méthodes associées aux ressources REST. 
+l'idée est d'encapsuler l'appel d'une ressource REST dans un simple appel de fonction. Les services sont déclarés dans un fichier
+ dont le nom est la concaténation de l'attribut {\tt label} et du mot \og Service \fg .  Ainsi, les ressources de la figure\ref{} .... à completer.
+ 
+ %inclure une ressource et la generation du service équivalent
+\subsection{Les vues}
+
+La génération de la vue consiste à générer le code html des composants du tableau children en fonction des propriétés positionnées par
+l'utilisateur. Outre les propriétés présentées à la section \ref{vues}, les composant disposent des propriétés qui leur sont propres. 
+
+\paragraph{{\tt input}.} Sa génération se fait selon le modèle de la figure \ref{...}. 
+\begin{verbatim}
+ <DIV [class="$class"] [style="$style"]>
+     [<LABEL for="$id">$label</LABEL>]
+      <INPUT [readonly] [placeholder="$label"] 
+	      name="$id ||$name" id="$id" type="$type" ng-model="$model"/>
+ </DIV>
+\end{verbatim}
+
+\paragraph{{\tt hx}.}Sa génération se fait selon la figure \ref{}. La construction de la balise est dynamique
+et dépend de la valeur de l'attribut {\tt type}. Les attributs {\tt model} et {\tt label} permettent de définir soit
+un contenu dynamique soit un contenu statique. 
+
+\begin{verbatim}
+ <H$type>$label || ${model}</H$type>
+\end{verbatim}
+
+\paragraph{{\tt i}.} 
+\begin{verbatim}
+ <i class="$class"  [style="$style"]></i>
+\end{verbatim}
+
+\paragraph{{\tt radio}.}
+\begin{verbatim}
+ <DIV class="md-radio md-radio-inline">
+	<p>Template type</p>
+	<input id="2a" value="static" ng-model="currentComponent.templatetype" type="radio" name="g2" checked>
+	<label for="2a">static</label>
+	<input id="3b" value="function" ng-model="currentComponent.templatetype" type="radio" name="g2" >
+	<label for="3b">function</label>
+</DIV>
+\end{verbatim}
+
 
 \subsection{Configuration des (routes) états}
 
-Nous faisons la configuration des états dans le fichier configs du module généré, à l'aide de 
-{\tt ui-router}\footnote{présenter ui-router}, un module tiers de angularjs. En effet, nous
-déclarons un état en spécifiant deux paramètres à la méthode {\tt state} de ui-router. Le premier 
-paramètre est le nom de l'état, celui fourni au niveau des configs de la vue par le paramètre state
-. Le deuxieme paramètre est un objet json dont les membres varient en fonction des paramètres renseignés 
-au niveau des configs de la vue. Toute fois, trois de ces paramètres sont obligatoires, il s'agit de 
-l'{\tt url} de l'état, du {\tt template} ou  {\tt templateUrl} de la vue associée  selon qu'il s'agisse 
-soit du code html en dure, soit du chemin d'un fichier html et du {\tt contrôleur} associé à l'état. %parler des contrôleurs inline
-Si spécifier, nous completons le paramètre {\tt onEnter}, ce dernier permet de faire des initialisations avant 
-le chargement du contrôleur et de la vue de l'état. Pareil pour le paramètre {\tt resolve}, ce dernier permet 
-de faire des traitements spécifiques avant le chargement du contrôleur.
+Nous générons la configuration des états dans un fichier config. Elle se fait à base de paramètres tels que les 
+
+
 
 
 \section{La présentation du générateur sous forme de module}
@@ -600,8 +850,6 @@ de faire des traitements spécifiques avant le chargement du contrôleur.
 \subsection{Les vues}
 %% faire un rappel du menu du module et présenter les actions/vues
 
-Le module \og generator \fg compte 5 vues accessible chacune par une option du 
-menu 
 
 
 \subsubsection{Le générateur de vues}

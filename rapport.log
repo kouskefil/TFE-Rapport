@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.26)  2 OCT 2017 10:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.7.26)  11 OCT 2017 21:22
 entering extended mode
 **./rapport.tex
 (rapport.tex
@@ -385,26 +385,20 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\opensans\opensans
-.sty"
-Package: opensans 2011/11/11 Opensans
- (slantsc.sty
-Package: slantsc 2012/01/01 v2.11 Provide Slanted an Italic Small Caps
-
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks17
+\extratabsurround=\skip43
+\backup@length=\skip44
 )
-LaTeX Info: Redefining \upshape on input line 35.
-LaTeX Info: Redefining \slshape on input line 45.
-LaTeX Info: Redefining \itshape on input line 55.
-LaTeX Info: Redefining \scshape on input line 65.
-))
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\enumitem\enumitem
 .sty"
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip43
-\enit@outerparindent=\dimen105
-\enit@toks=\toks17
+\labelindent=\skip45
+\enit@outerparindent=\dimen107
+\enit@toks=\toks18
 \enit@inbox=\box26
 \enitdp@description=\count89
 )
@@ -412,16 +406,16 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 .sty"
 \lst@mode=\count90
 \lst@gtempboxa=\box27
-\lst@token=\toks18
+\lst@token=\toks19
 \lst@length=\count91
-\lst@currlwidth=\dimen106
+\lst@currlwidth=\dimen108
 \lst@column=\count92
 \lst@pos=\count93
-\lst@lostspace=\dimen107
-\lst@width=\dimen108
+\lst@lostspace=\dimen109
+\lst@width=\dimen110
 \lst@newlines=\count94
 \lst@lineno=\count95
-\lst@maxwidth=\dimen109
+\lst@maxwidth=\dimen111
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.
 sty"
@@ -456,21 +450,21 @@ Language: frenchb 2017/04/30 v3.3a French support from the babel system
 "
 File: babel.def 2017/05/19 3.10 Babel common definitions
 \babel@savecnt=\count98
-\U@D=\dimen110
+\U@D=\dimen112
 )
 \l@acadian = a dialect from \language\l@french 
 \l@canadien = a dialect from \language\l@french 
 \FB@nonchar=\count99
-\FBcolonsp=\toks19
-\FBthinsp=\toks20
+\FBcolonsp=\toks20
+\FBthinsp=\toks21
 Package babel Info: Making : an active character on input line 362.
 Package babel Info: Making ; an active character on input line 363.
 Package babel Info: Making ! an active character on input line 364.
 Package babel Info: Making ? an active character on input line 365.
-\FBguillsp=\toks21
+\FBguillsp=\toks22
 \FBguill@level=\count100
-\FB@everypar=\toks22
-\FB@Mht=\dimen111
+\FB@everypar=\toks23
+\FB@Mht=\dimen113
 \mc@charclass=\count101
 \mc@charfam=\count102
 \mc@charslot=\count103
@@ -481,19 +475,12 @@ Package babel Info: Making ? an active character on input line 365.
 Package frenchb.ldf Warning: Please load the "listings" package
 (frenchb.ldf)                AFTER babel/frenchb; reported on input line 988.
 
-\listindentFB=\skip44
-\descindentFB=\skip45
-\labelwidthFB=\skip46
-\leftmarginFB=\skip47
-\parindentFFN=\dimen112
-\FBfnindent=\skip48
-)
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-english\eng
-lish.ldf"
-Language: english 2017/01/24 v3.3q English support from the babel system
-\l@canadian = a dialect from \language\l@american 
-\l@australian = a dialect from \language\l@british 
-\l@newzealand = a dialect from \language\l@british 
+\listindentFB=\skip46
+\descindentFB=\skip47
+\labelwidthFB=\skip48
+\leftmarginFB=\skip49
+\parindentFFN=\dimen114
+\FBfnindent=\skip50
 ))
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\carlisle\scalefnt
 .sty")
@@ -521,36 +508,18 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count106
 \Gm@cntv=\count107
 \c@Gm@tempcnt=\count108
-\Gm@bindingoffset=\dimen113
-\Gm@wd@mp=\dimen114
-\Gm@odd@mp=\dimen115
-\Gm@even@mp=\dimen116
-\Gm@layoutwidth=\dimen117
-\Gm@layoutheight=\dimen118
-\Gm@layouthoffset=\dimen119
-\Gm@layoutvoffset=\dimen120
-\Gm@dimlist=\toks23
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
+\Gm@dimlist=\toks24
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geometry
-.cfg"))
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\color.st
-y"
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
-
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\colo
-r.cfg"
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 147.
-)
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1
-.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstmisc.
-sty"
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-) (upquote.sty
+.cfg")) (upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 
@@ -708,43 +677,52 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (rapport.aux)
+)) (rapport.aux
+
+LaTeX Warning: Label `si:res' multiply defined.
+
+
+LaTeX Warning: Label `si:res' multiply defined.
+
+
+LaTeX Warning: Label `si:res' multiply defined.
+
+)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 48.
-
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 17.
+ ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 48.
+LaTeX Font Info:    ... okay on input line 17.
 
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.m
 kii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
-\scratchdimen=\dimen121
+\scratchdimen=\dimen123
 \scratchbox=\box29
 \nofMPsegments=\count110
 \nofMParguments=\count111
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count112
-\MPscratchDim=\dimen122
+\MPscratchDim=\dimen124
 \MPnumerator=\count113
 \makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 )
 ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdftex
 cmds.sty"
@@ -797,9 +775,15 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \c@lstlisting=\count115
-LaTeX Info: Redefining \degres on input line 48.
-LaTeX Info: Redefining \dots on input line 48.
-LaTeX Info: Redefining \up on input line 48.
+LaTeX Info: Redefining \degres on input line 17.
+LaTeX Info: Redefining \dots on input line 17.
+Package frenchb.ldf Info: Setting StandardItemizeEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 17.
+Package frenchb.ldf Info: Setting StandardEnumerateEnv=true for
+(frenchb.ldf)             compatibility with enumitem package,
+(frenchb.ldf)             reported on input line 17.
+LaTeX Info: Redefining \up on input line 17.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -835,173 +819,231 @@ LaTeX Info: Redefining \up on input line 48.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Chapter 1.
+Chapitre 1.
 [1
 
 
 {C:/Users/Kèfil/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Chapter 2.
+Chapitre 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 59.
+(Font)              <10.95> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 59.
+(Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 59.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 59.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 59.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 74.
-("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
+(Font)              <6> on input line 28.
 [2
 
-] [3] [4]
-Chapter 3.
+] [3]
+Chapitre 3.
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 161.
+LaTeX Warning: Reference `' on page 4 undefined on input line 94.
 
 
-LaTeX Warning: Reference `' on page 5 undefined on input line 164.
+LaTeX Warning: Reference `' on page 4 undefined on input line 97.
 
-[5
+[4
 
 ]
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 167.
+LaTeX Warning: Reference `' on page 5 undefined on input line 100.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 170.
+LaTeX Warning: Reference `' on page 5 undefined on input line 103.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 172.
+LaTeX Warning: Reference `' on page 5 undefined on input line 105.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 174.
+LaTeX Warning: Reference `' on page 5 undefined on input line 107.
+
+[5]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 200.
+
+ ("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [6]
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 249.
 
 
-Overfull \hbox (13.41797pt too wide) in paragraph at lines 213--220
-\T1/cmr/m/n/10.95 f�rents �l�-ments n�ces-saires � l'impl�mentation des ap-pli-
-ca-tions client et serveur, en vue d'augmenter
- []
+LaTeX Warning: Reference `' on page 7 undefined on input line 250.
 
-[6] [7]
-Overfull \hbox (16.31625pt too wide) in paragraph at lines 277--282
-\T1/cmr/m/n/10.95 Ils con-stituent un outil graphique per-me-t-tant de ma-nip-u
-ler les �l�-ments qui en-trent dans l'�laboration
- []
+
+LaTeX Warning: Reference `' on page 7 undefined on input line 252.
+
+[7]
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 288.
+
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 315.
 
 [8]
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 316.
+LaTeX Warning: Reference `' on page 9 undefined on input line 369.
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 317.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 319.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 355.
+LaTeX Warning: Reference `' on page 9 undefined on input line 380.
 
 [9]
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 382.
-
-[10]
-
-LaTeX Warning: Reference `' on page 11 undefined on input line 436.
+LaTeX Warning: Reference `' on page 10 undefined on input line 408.
 
 
-LaTeX Warning: Reference `' on page 11 undefined on input line 447.
-
-[11]
-
-LaTeX Warning: Reference `' on page 12 undefined on input line 475.
+LaTeX Warning: Reference `' on page 10 undefined on input line 424.
 
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 491.
+LaTeX Warning: Reference `' on page 10 undefined on input line 424.
+
+[10] [11]
+Chapitre 4.
+
+LaTeX Warning: Reference `tab:json' on page 12 undefined on input line 470.
+
+[12
+
+] [13]
+
+LaTeX Warning: Reference `reference vers la barre des actions' on page 14 undef
+ined on input line 654.
 
 
-LaTeX Warning: Reference `' on page 12 undefined on input line 491.
+LaTeX Warning: Reference `si:chi' on page 14 undefined on input line 668.
 
-[12] [13]
-Chapter 4.
 
-LaTeX Warning: Reference `' on page 14 undefined on input line 533.
+LaTeX Warning: Reference `si:met' on page 14 undefined on input line 737.
 
-[14
+[14]
 
-] [15] <./images/view.png, id=62, 1006.76125pt x 551.05875pt>
-File: ./images/view.png Graphic file (type png)
+LaTeX Warning: Reference `si:ope' on page 15 undefined on input line 752.
 
-<use ./images/view.png>
-Package pdftex.def Info: ./images/view.png used on input line 611.
-(pdftex.def)             Requested size: 409.71692pt x 224.26225pt.
+[15]
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--612
+LaTeX Warning: Reference `' on page 16 undefined on input line 788.
 
+
+LaTeX Warning: Reference `' on page 16 undefined on input line 788.
+
+
+LaTeX Warning: Reference `' on page 16 undefined on input line 797.
+
+
+LaTeX Warning: Reference `...' on page 16 undefined on input line 807.
+
+[16]
+
+LaTeX Warning: Reference `' on page 17 undefined on input line 816.
+
+
+LaTeX Warning: Reference `' on page 17 undefined on input line 829.
+
+
+Overfull \hbox (59.66765pt too wide) in paragraph at lines 842--842
+[]      \T1/cmtt/m/n/10.95 <INPUT id="$id" value="$value" ng-model="$model" typ
+e="radio" name="$name" [checked]>[] 
  []
 
-<./images/operations.png, id=64, 1013.7875pt x 506.89375pt>
-File: ./images/operations.png Graphic file (type png)
 
-<use ./images/operations.png>
-Package pdftex.def Info: ./images/operations.png used on input line 615.
-(pdftex.def)             Requested size: 409.71692pt x 204.85771pt.
+LaTeX Warning: Reference `' on page 17 undefined on input line 846.
 
-Underfull \hbox (badness 10000) in paragraph at lines 613--616
 
+Overfull \hbox (54.00928pt too wide) in paragraph at lines 856--856
+[]      \T1/cmtt/m/n/10.95 name="$id ||$name" id="$id" [ui-codemirror="cmOption
+"] ng-model="$model"></TEXTAREA>[] 
  []
 
-[16 <./images/view.png>]
-<./images/resources.png, id=69, 1022.82124pt x 580.1675pt>
-File: ./images/resources.png Graphic file (type png)
 
-<use ./images/resources.png>
-Package pdftex.def Info: ./images/resources.png used on input line 619.
-(pdftex.def)             Requested size: 409.71692pt x 232.39928pt.
+LaTeX Warning: Reference `' on page 17 undefined on input line 859.
 
-Underfull \hbox (badness 10000) in paragraph at lines 617--620
-
+[17]
+Overfull \hbox (65.32602pt too wide) in paragraph at lines 865--865
+[]\T1/cmtt/m/n/10.95 <[DIV] || [BUTTON] [class="$class"] [style="$style"] id="$
+id" >  $label <<[DIV] || [BUTTON]>[] 
  []
 
-[17 <./images/operations.png> <./images/resources.png>] [18]
-Chapter 5.
-[19
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 868.
+
+
+Overfull \hbox (274.68575pt too wide) in paragraph at lines 879--879
+[]         \T1/cmtt/m/n/10.95 <SELECT  [class="$class"] [style="$style"] name="
+select297" id="select297" ng-model="method.name" class="form-control" >[] 
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 879
+.
+("C:\Users\Kèfil\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd"
+File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Overfull \hbox (133.22647pt too wide) in paragraph at lines 879--879
+[]          \T1/cmtt/m/n/10.95 <OPTION ng-repeat=\TS1/cmtt/m/n/10.95 '\T1/cmtt/
+m/n/10.95 item in $collection\TS1/cmtt/m/n/10.95 ' \T1/cmtt/m/n/10.95 value="{{
+item.$rvalue}}"> {{item.$dvalue}}   </OPTION>[] 
+ []
+
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 882.
+
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 889.
+
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 897.
+
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 905.
+
+
+LaTeX Warning: Reference `' on page 18 undefined on input line 913.
+
+[18]
+
+LaTeX Warning: Reference `' on page 19 undefined on input line 932.
+
+
+LaTeX Warning: Reference `' on page 19 undefined on input line 938.
+
+[19] [20]
+Chapitre 5.
+[21
 
 ] (rapport.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 6075 strings out of 493323
- 87725 string characters out of 3129581
- 170683 words of memory out of 3000000
- 9496 multiletter control sequences out of 15000+200000
- 17889 words of font info for 41 fonts, out of 3000000 for 9000
+ 5905 strings out of 493323
+ 84557 string characters out of 3129581
+ 158708 words of memory out of 3000000
+ 9350 multiletter control sequences out of 15000+200000
+ 17189 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,49p,255b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,10n,32p,239b,423s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600
-\ecbx1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
-n\ec\dpi600\ecti1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\f
-onts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\Kèfil\AppData\Local\M
-iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Kèfil\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1095.pk> <C:\Users\
-Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk>
+\tcbx1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
+n\ec\dpi600\tctt1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\eccc1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\f
+onts\pk\ljfour\jknappen\ec\dpi600\ectt1095.pk> <C:\Users\Kèfil\AppData\Local\M
+iKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1095.pk> <C:\Users\Kèfil\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1095.pk> <C:\Users\
+Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk>
  <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\e
-crm0800.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
-ec\dpi600\ecbx1440.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
-r\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fon
-ts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Kèfil\AppData\Local\MiK
-TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><C:/Users/Kèfil/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on rapport.pdf (19 pages, 251035 bytes).
+cbx1200.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
+ec\dpi600\ecrm0800.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fonts\pk\ljfou
+r\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\Kèfil\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecrm1095.pk> <C:\Users\Kèfil\AppData\Local\MiK
+TeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2488.pk> <C:\Users\Kèfil\AppDat
+a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx2074.pk><C:/Users/Kè
+fil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+<C:/Users/Kèfil/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb>
+Output written on rapport.pdf (21 pages, 198102 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
+ 516 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
