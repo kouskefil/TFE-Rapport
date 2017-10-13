@@ -800,7 +800,9 @@ l'idée est d'encapsuler l'appel d'une ressource REST dans un simple appel de fo
 \subsection{Les vues}
 
 La génération de la vue consiste à générer le code html des composants du tableau children en fonction des propriétés positionnées par
-l'utilisateur. Outre les propriétés présentées à la section \ref{vues}, les composant disposent des propriétés qui leur sont propres. 
+l'utilisateur. Outre les propriétés présentées à la section \ref{vues}, les composant disposent des propriétés qui leur sont propres.
+
+%présenter  bootstrap
 
 \paragraph{{\tt input}.} Sa génération se fait selon le modèle de la figure \ref{...}. 
 \begin{verbatim}
@@ -824,16 +826,165 @@ un contenu dynamique soit un contenu statique.
  <i class="$class"  [style="$style"]></i>
 \end{verbatim}
 
-\paragraph{{\tt radio}.}
+\paragraph{{\tt radio}.} La génération des boutons radio se fait selon la figure \ref{}. Outre les attributs communs, 
+ce composant introduit les attributs {\tt separator} et  {\tt options}, cette dernière est une chaîne de caractère constituée des
+différentes options du bouton radio séparées par un séparateur spécifié par l'attribut  {\tt separator}. En effet 
+pour générer ce composant, on parcourt la chaîne des options et on extrait chaque option délimiter par le séparateur, puis on génère 
+un bouton pour l'option. 
 \begin{verbatim}
- <DIV class="md-radio md-radio-inline">
-	<p>Template type</p>
-	<input id="2a" value="static" ng-model="currentComponent.templatetype" type="radio" name="g2" checked>
-	<label for="2a">static</label>
-	<input id="3b" value="function" ng-model="currentComponent.templatetype" type="radio" name="g2" >
-	<label for="3b">function</label>
-</DIV>
+ <DIV [class="$class"]>
+	[<P>$label</P>]
+	FOR item IN $options
+	      <INPUT id="$id" value="$value" ng-model="$model" type="radio" name="$name" [checked]>
+	      <LABEL for="$id">$item</LABEL>
+	ENDFOR
+  </DIV>
 \end{verbatim}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt textarea}.} La génération de ce composant se fait selon le code de la figure \ref{}. Il introduit
+l'attribut {\tt codeEditor}, si ce dernier a pour valeur \og vrai \fg alors le composant sera générer en tant qu'éditeur
+de code. Ce composant a été généré dans l'interface {\tt vue} sous les onglets \og variables \fg et  \og functions \fg .
+
+\begin{verbatim}
+ <DIV [class="$class"] [style="$style"]>
+     [<LABEL for="$id">$label</LABEL>]
+      <TEXTAREA  [placeholder="$label"] class="form-control"
+	      name="$id ||$name" id="$id" [ui-codemirror="cmOption"] ng-model="$model"></TEXTAREA>
+ </DIV>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt button}.} La génération des boutons se fait selon le code de la figure \ref{}. Le bouton introduit les attributs
+{\tt div} et  {\tt dynamic}. Ces attributs sont optionnels et spécifient respectivement si l'on veut générer le bouton avec une 
+balise \og div \fg au lieu de la balise \og button \fg traditionnelle, et si l'on veut que le label du bouton soit dynamique.
+
+\begin{verbatim}
+<[DIV] || [BUTTON] [class="$class"] [style="$style"] id="$id" >  $label <<[DIV] || [BUTTON]>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt select}.} La génération d'un {\tt select} se fait selon le code de la figure \ref{}. Il introduit les attributs {\tt collection}, {\tt rvalur}
+et {\tt dvalue}. ces derniers sont obligatoires et spécifient  respectivement le tableau de données qui alimente le composant, la valeur retournée 
+par le composant et enfin la valeur affichée. 
+
+\begin{verbatim}
+<DIV  class="form-group">
+    	 [<label for="select297">$label</label>]
+         <SELECT  [class="$class"] [style="$style"] name="select297" id="select297" ng-model="method.name" class="form-control" >
+         		<OPTION ng-repeat='item in $collection' value="{{item.$rvalue}}"> {{item.$dvalue}} 	 </OPTION>
+        </SELECT>
+</DIV>
+\end{verbatim} 
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt label}.} La génération d'un {\tt label} se fait selon le code de la figure \ref{}. Ce composant peut avoir un contenu
+statique ou dynamique selon que l'utilisateur spécifie une valeur pour l'attribut {\tt label} ou spécifie la valeur de l'attribut {\tt model}.
+
+\begin{verbatim}
+<LABEL [class="$class"] [style="$style"] id="$id">[$label] || [$model] </LABEL>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt hr}•} La génération d'un {\tt label} se fait selon le code de la figure \ref{}. Ce composant n'a pas besoin de paramètres
+particuliers en dehors de l'habillage css.
+
+\begin{verbatim}
+<HR [class="$class"] [style="$style"] id="$id"/>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt span}•} La génération d'un {\tt span} se fait selon le code de la figure \ref{}. Il n'a pas d'attributs particuliers et peut soit
+avoir un contenu statique si l'attribut {\tt label} est renseigné ou un contenu dynamique si l'attribut{\tt model} est renseigné.
+
+\begin{verbatim}
+<SPAN [class="$class"] [style="$style"] id="$id">[$label] || [$model]</SPAN	>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt img}•} La génération du composant {\tt img} se fait selon le code de la figure \ref{}. Il introduit l'attribut {\tt src} qui permet
+à l'utilisateur de spécifier la source de l'image que le composant va afficher.
+
+\begin{verbatim}
+<IMG [class="$class"] [style="$style"] id="$id" src="$src"></IMG>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt group}• }La génération du composant {\tt group} se fait selon le code de la figure \ref{}. Ce composant introduit autant d'attributs
+que de paramètres nécessaires pour sa configuration. Il participe à la construction d'autres composants en fonction desquels 
+ses attributs sont ou non  optionnels. En effet nous avons :
+
+\begin{itemize}
+\item {{\tt position}.} Cet attribut spécifie la position du composant sur l'écran, il possède 3 options que sont \og center \fg , \og right \fg et \og left \fg .
+\item {{\tt width}.} C'est la largeur du composant, elle se définit en colonne et un {\tt group} en avoir 12 au total.
+\item {{collapsible}.} Il spécifie si le composant sera pliable/ dépliable 
+\item {{\tt uiview}.} spécifie si oui ou non le composant affichera des bouts de pages html associées à des états donnés.
+\item {{\tt row}.} Si cet attribut a pour valeur \og vrai \fg , le contenu du composant sera afficher en ligne.
+\item {{\tt src}.} Spécifie le chemin vers une page html qui s'affichera dans le composant.
+\item  {{\tt expression}.} Spécifie les  conditions  dans lesquelles le composant sera affiché ou caché.
+\end{itemize}
+
+\begin{verbatim}
+<DIV [class="$class"] [style="$style"]  id="$id"> </DIV>
+\end{verbatim}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt paragraph}• }La génération du composant {\tt group} se fait selon le code de la figure \ref{}.
+
+\begin{verbatim}
+<P  [class="$class"] [style="$style"]  id="$id"> </P>
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt tab}•}La génération du composant {\tt tab} se fait selon le code de la figure \ref{}. Il est conçu à partir du composant
+{\tt group}. En effet, il possède un attribut \og children \fg qui est un tableau de {\tt group}. Chaque groupe représente un onglet et ici, 
+{\tt group } introduit les attributs \og index \fg et \og heading \fg qui représentent respectivement l'index de l'onglet et le nom de l'onglet.
+
+\begin{verbatim}
+ <UIB-TABSET  [class="$class"] [style="$style"]  id="$id" >
+       FOR item IN children
+	          <UIB-TAB index="item.num"  heading="item.label"> 
+           </UIB-TAB>
+       ENDFOR           
+</UIB-TABSET>            
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt accordion}•}La génération du composant {\tt tab} se fait selon le code de la figure \ref{}. Comme les {\tt tab}, il est aussi
+conçu à partir des groupes. Ici, le seul attribut utilisé ici est \og heading \fg qui indique le nom du composant.
+\begin{verbatim}
+ <UIB-ACCORDION  [class="$class"] [style="$style"]  id="$id" >
+       FOR item IN children
+	          <UIB-TAB-GROUP   heading="item.label"> 
+             </UIB-TAB-GROUP>
+       ENDFOR           
+</UIB-ACCORDION>            
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt wizard}•}La génération du composant {\tt wizard} se fait selon le code de la figure \ref{}. Il est aussi conçu à base du composant
+{\tt group}, son attribut \og children  \fg est un tableau de groupes représentant  les étapes successives du {\tt wizard}.
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt form }•}La génération de ce composant se fait selon le code de la figure \ref{}. Il introduit l'attribut \og formValidation \fg qui spécifie si 
+oui ou non il faut inclure la validation du formulaire dans la génération. {\tt form } dispose aussi d'un attribut \og children \fg contenant les différents
+sous-composants nécessaires à sa génération.
+
+\begin{verbatim}
+  <FORM no-validate [class="$class"] [style="$style"]  id="$id">  
+      ::::::
+  </FORM>      
+\end{verbatim}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt treeview }•}Le composant {\tt treeview} se fait selon le code de la  figure \ref{}
+
+
+
+
+
+
+
+
 
 
 \subsection{Configuration des (routes) états}

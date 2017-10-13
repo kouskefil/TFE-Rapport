@@ -940,7 +940,7 @@ ses attributs sont ou non  optionnels. En effet nous avons :
 {\tt group } introduit les attributs \og index \fg et \og heading \fg qui représentent respectivement l'index de l'onglet et le nom de l'onglet.
 
 \begin{verbatim}
- <UIB-TABSET >
+ <UIB-TABSET  [class="$class"] [style="$style"]  id="$id" >
        FOR item IN children
 	          <UIB-TAB index="item.num"  heading="item.label"> 
            </UIB-TAB>
@@ -950,7 +950,42 @@ ses attributs sont ou non  optionnels. En effet nous avons :
 %----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \paragraph{{\tt accordion}•}La génération du composant {\tt tab} se fait selon le code de la figure \ref{}. Comme les {\tt tab}, il est aussi
-conçu à partir des groupes. Ici, le seul attribut utilisé ici est \og heading \fg qui indique le nom de 
+conçu à partir des groupes. Ici, le seul attribut utilisé ici est \og heading \fg qui indique le nom du composant.
+\begin{verbatim}
+ <UIB-ACCORDION  [class="$class"] [style="$style"]  id="$id" >
+       FOR item IN children
+	          <UIB-TAB-GROUP   heading="item.label"> 
+             </UIB-TAB-GROUP>
+       ENDFOR           
+</UIB-ACCORDION>            
+\end{verbatim}
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt wizard}•}La génération du composant {\tt wizard} se fait selon le code de la figure \ref{}. Il est aussi conçu à base du composant
+{\tt group}, son attribut \og children  \fg est un tableau de groupes représentant  les étapes successives du {\tt wizard}.
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{{\tt form }•}La génération de ce composant se fait selon le code de la figure \ref{}. Il introduit l'attribut \og formValidation \fg qui spécifie si 
+oui ou non il faut inclure la validation du formulaire dans la génération. {\tt form } dispose aussi d'un attribut \og children \fg contenant les différents
+sous-composants nécessaires à sa génération.
+
+\begin{verbatim}
+  <FORM no-validate [class="$class"] [style="$style"]  id="$id">  
+      ::::::
+  </FORM>      
+\end{verbatim}
+
+%----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\paragraph{{\tt treeview }•}La génération du composant {\tt treeview} se fait selon le code de la  figure \ref{}. 
+
+
+
+
+
+
+
+
+
 
 \subsection{Configuration des (routes) états}
 
@@ -961,20 +996,141 @@ Nous générons la configuration des états dans un fichier config. Elle se fait
 
 \section{La présentation du générateur sous forme de module}
 
-
-
 \subsection{Les vues}
 %% faire un rappel du menu du module et présenter les actions/vues
+Dans le cadre de l'implémentation de notre module, nous avons conçu via l'arbre des composants, cinq interfaces à
+savoir : \og modules \fg , \og views \fg , \og resources \fg , \og operations \fg et \og overview \fg .
 
 
 
-\subsubsection{Le générateur de vues}
+
 
 \subsection{Les ressources}
-%% présenter les différentes ressources et leurs opérations associées
+Nous avons défini sept ressources REST   que sont : \og modules \fg ,  \og id \fg , \og files \fg , \og fname \fg ,
+ \og generate \fg et \og upload \fg . Elles représentent respectivement la liste des modules,
+ les fichiers  d'un module, récupérer un fichier,  le générateur de vues et la sauvegarde.
+ 
+  Dans le reste de cette section,  nous allons présenter pour chacune des ressources,  les méthodes et les opérations associées.
+ 
+ \subsubsection{La liste des modules}
+
+Elle est représentée par l'uri {\tt  /generator/modules } et dispose de deux méthodes : une pour récupérer la liste des modules et
+une autre pour créer un nouveau module.
+
+\paragraph{Liste.} Cette méthode est une requête http de type {\tt GET } à laquelle on associe l'opération {\tt modules} de type  \og requests \fg  .
+Le code \ref{} représente la requête sql  exécutée par  {\tt modules}.
+
+\begin{verbatim}
+	select json_agg(foo) from 
+	(select id, module from generator.modules where module->>'owner'=$1) foo
+\end{verbatim}
+
+\paragraph{Création.} Cette méthode est une requête http de type {\tt POST } à laquelle on associe l'opération {\tt newmodule} de type  \og requests \fg  .
+Le code \ref{} représente la requête sql  exécutée par  {\tt newmodule}.
+
+\begin{verbatim}
+insert into generator.modules (module) values($1) returning id
+\end{verbatim}
+
+\subsubsection{ Les fichiers  d'un module}
+
+Elle est représentée par l'uri {\tt  /generator/modules/\{id\}/files } et dispose d'une méthode  pour récupérer les tous les fichiers
+d'un  module. 
+
+La méthode est une requête http de type {\tt GET } à laquelle on associe l'opération {\tt files} de type  \og empty \fg  .
+Le listing \ref{} est le code de l'opération files que nous avons écrit, elle consiste à décrire l'arborescence du répertoire d'un module
+sous un format json. 
+
+%\begin{verbatim}
+%void getfiles( char *path, cJSON *tab)
+%{
+%  struct dirent  entry, *rs = 0;
+%  DIR *d;
+%  char d_path[255]; 
+%  
+%  if(!(d = opendir(path)))
+%    return;
+%   
+%  while (1)
+%    {
+%      readdir_r(d, &entry, &rs);
+%      if(!rs)
+%	break;
+%	      
+%      if(strcmp(".", entry.d_name) && strcmp("..", entry.d_name))
+%	cJSON_AddItemToArray(tab, cJSON_CreateString(entry.d_name));
+%
+%    }
+%  closedir(d); 
+%}
+%\end{verbatim}
+
+\subsubsection{Le contenu d'un fichier}
+la ressource est représentée par l'uri {\tt  /generator/modules/\{id\}/files/\{type\}/\{fname\} } où id représente 
+l'identifiant d'un module, type représente le type du fichier à récupérer et fname représente le nom du fichier. 
+Elle  dispose de la  méthode \og file \fg  pour récupérer un  fichier donné. 
+
+La méthode est une requête http de type {\tt GET } à laquelle on associe l'opération {\tt file} de type  \og empty \fg  .
+Le code \ref{} montre notre implémentation de l'opération {\tt file}. Dans un premier temps, nous déterminons  le 
+chemin relatif du fichier recherché, à partir des paramètres fournis. Dans un second temps, nous utilisons l'API
+{\tt module\_localStorage\_read}, fourni par la plateforme, qui nous renvoi le contenu recherché.
+
+%\begin{verbatim}
+%void generator_getfile(module_ctx *mod)
+%{
+%  char name[256];
+%  int restno, restlen;
+%  restful_t *r = module_restful(mod);
+%  char *id, *type, *fname;
+%
+%  restno = restful_gettemplate_param(r, "id");
+%  restlen = r->params[restno].end-r->params[restno].begin;
+%  id = mem_calloc(1, restlen+1);
+%  snprintf(id, restlen+1, "%.*s",
+%	   r->params[restno].end-r->params[restno].begin,
+%	   r->path+r->params[restno].begin);
+%  restno = restful_gettemplate_param(r, "type");
+%  restlen = r->params[restno].end-r->params[restno].begin;
+%  type = mem_calloc(1, restlen+1);
+%  snprintf(type, restlen+1, "%.*s",
+%	   r->params[restno].end-r->params[restno].begin,
+%	   r->path+r->params[restno].begin);
+%  restno = restful_gettemplate_param(r, "fname");
+%  restlen = r->params[restno].end-r->params[restno].begin;
+%  fname = mem_calloc(1, restlen+1);
+%  snprintf(fname, restlen+1, "%.*s",
+%	   r->params[restno].end-r->params[restno].begin,
+%	   r->path+r->params[restno].begin);
+%
+%  if(!strcmp(type, "operation"))
+%    snprintf(name, sizeof(name), "generator/%s/libsrc/%s", id, fname);
+%  else if(!strcmp(type, "service"))
+%    snprintf(name, sizeof(name), "generator/%s/www/services/%s", id, fname);
+%  else if(!strcmp(type, "view"))
+%    snprintf(name, sizeof(name), "generator/%s/www/views/%s", id, fname);
+%  else if(!strcmp(type, "controller"))
+%    snprintf(name, sizeof(name), "generator/%s/www/controllers/%s", id, fname);
+%  else if(!strcmp(type, "workflow"))
+%    snprintf(name, sizeof(name), "generator/%s/process/%s", id, fname);
+%  else if(!strcmp(type, "sql"))
+%    snprintf(name, sizeof(name), "generator/%s/sql/%s", id, fname);
+%  else if(!strcmp(type, "json"))
+%    snprintf(name, sizeof(name), "generator/%s/%s", id, fname);
+%
+%  elog_debug("%s name=%s", __func__, name);
+%
+%  module_localStorage_read(mod, name, getfile_done, 0);
+%
+%  mem_free(id);
+%  mem_free(type);
+%  mem_free(fname);
+%}
+%
+%\end{verbatim}
 
 
 \subsection{La base de données}
+\subsection{Le générateur de vues}
 
 \subsection{La collaboration}
 %% parler de gitolite et de la manière dont on crée des branches pour
